@@ -1,0 +1,68 @@
+Insert notes here:
+
+KOTO:
+- KOTO: K0 at Tokai
+- Experiment am J-Parc (Japan Proton Accelerator Research Komplex)
+- Neueste Entwicklung: Verschärfung der Sensitivität für seltene neutrale Kaonenzerfälle um eine Größenordnung
+- Hoffnung: Erklärung der Materie-Antimaterie Asymmetrie (CP - Verletzung) durch die Kaonenzerfälle
+            => Höhere Sensitivität erhofft
+            => durch Nutzung des high intensity proton beams des J-PARC
+- CP - Verletzung erstmals 1964 durch Kaonzerfälle entdeckt: Cronin und Fitch
+- Wurde später durch Entdeckungen von B- Fabriken (KEK B, LHC-B)
+  => KEK B verified th theory by Kobayashi and Maskawa => CKM - Matrix
+  => Aber die gemessenen Asymmetrien reichen nicht aus um die Disparität zwischen Materie und Antimaterie zu erklären
+- Messung des Zerfalls KL -> ny ny pi0
+- Zerfall soll einmal pro 30 milliarden zerfälle auftreten
+- Aufbau:
+  - Protonstrahl mit 30GeV wird vom Hauptbeschleuniger zur Experimentierhalle abgezweigt
+  - Trifft ein Goldtarget und erzeugt sekundäre teilchen
+  - Die neutralen Kaonen werden mit einer 20 m langen neutralen Beamline zum Experiment geführt
+  - In der Vakuumkammer (4*6m zylindrisch) werden die Teilchen aus den neutralen Kaonzerfällen aufgefangen
+  - Neutrinos kann man natürlich nicht messen
+  => Aber die zwei gamma teilchen aus dem pion zerfall
+  - Detektion mit EM- Kalorimeter
+  - 'einfache' Selektion: werden andere Teilchen gemessen, dann ists nicht der gesuchte zerfall
+  - Allerdings ist es in Wahrheit sehr schwer das richtige Signal vom Hintegrund zu trennen
+  => KL zerfällt bevorzugt in Pionen
+  - Die neuen Resultate verbessern die Sensitivität um eine Größenordnung
+  => neue obere Grenze
+
+KLEVER:
+- Gleicher Zerfall wie KOTO
+
+NA31:
+- Nur für Historie
+- North Area 31 @ Cern
+- erstmaliger Nachweis direkter Cp- Verletzung
+
+CPLEAR
+- Why does the Universe exists of Matter and not Antimatter?
+- Messen der Zeitabhängig der Zerfallsraten der Asymmetrien
+=> K0 -> e+ ny pi-    ;     K0quer -> e- nyquer pi+
+=> K0 -> pi+pi-
+=> K0 -> p0 pi0
+=> K0 -> 3pi
+
+
+NA48:
+- NA48: North Area 48 @ Cern => Super Proton Synchrotron
+- Messung der CP- Verletzung im neutralen Kaonensystem
+- Messung 1999 auch an KTeV für Indizien der direkten CP- Verletzung
+=> Drei Tochterexperimente:
+  - NA48-1: Suche vorrangig nach seltenen KS Zerfällen
+  - NA48-2: Hohe Statistik der Zerfälle von geladenen Kaonen
+  - NA62: Untersuchen des seltenen Zerfalls K+ -> pi+ ny ny recent
+- Was ist überhaupt das Ziel?:
+
+Kaonenzustände:
+- KL = K long => long lived
+- KS = K short => short lived
+
+Problem Materie Antimaterie:
+- es eine Kraft gibt, die die Symmetrie zwischen Materie und Antimaterie zerstört („verletzt“)
+- es eine Kraft gibt, die die Zahl der schweren Teilchen geringfügig verändert und
+- es bei der Expansion des Universums Phasen gibt, in denen das thermodynamische Gleichgewicht nicht gilt.
+Lösung:
+- Die erste Bedingung bedeutet, dass unsere Annahme, alle Kräfte wirkten symmetrisch auf Materie und Antimaterie, falsch ist.
+- Aus der zweiten folgt, dass auch Protonen nicht unbegrenzt stabil sind; allerdings liegen die experimentellen Grenzen für die Lebensdauer der Protonen bei mehr als 1031 Jahren.
+- Die dritte Bedingung lässt sich in kosmologischen Modellen auf verschiedene Weise erfüllen; eine Möglichkeit ist die sehr schnelle „inflationäre“ Expansion, eine andere besteht in einem starken Phasenübergang erster Ordnung der elektroschwachen Wechselwirkung im Standardmodell.
