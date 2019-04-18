@@ -1,0 +1,286 @@
+\PassOptionsToPackage{unicode}{hyperref}
+\documentclass[aspectratio=1610, professionalfonts, 9pt, t]{beamer}
+
+\usefonttheme[onlymath]{serif}
+\usetheme[showtotalframes]{tudo}
+
+
+\usepackage{polyglossia}
+\setmainlanguage{english}
+
+% Mathematik
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  sans-style=italic,
+  nabla=upright,
+  partial=upright,
+]{unicode-math}
+\setmathfont{Latin Modern Math}
+\usepackage{xparse}
+\usepackage{braket}
+\usepackage{ulem}
+\usepackage{units}
+\usepackage[locale=DE,separate-uncertainty=true,per-mode=reciprocal,output-decimal-marker={,},]{siunitx}
+\usepackage[section]{placeins}
+\usepackage{pdflscape}
+\usepackage{expl3}
+\usepackage{bookmark}
+%Komma als Dezimaltrenner in der mathe Umgebung, um in Umgebungen wie [0, 2] ein Leerzeichen nach dem Komma zu erhalten einfach eins setzen
+\usepackage{icomma}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{feynman-tikz}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{subfigure}
+\usepackage{booktabs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%-------------Hier Titel/Autor/Grafik/Lehrstuhl eintragen--------------%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Titel:
+\title{Kaonenexperimente im Wandel der Zeit}
+%Autor
+\author[F.~Koch]{Fabian Koch}
+%Datum der Präsentation
+\date{02.05.19}
+%Lehrstuhl/Fakultät
+\institute[Fakultät Physik ]{Fakultät Physik}
+
+\begin{document}
+
+\AtBeginSection[]
+{
+  \begin{frame}{Inhalt}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Übersicht}
+  \tableofcontents
+\end{frame}
+
+
+\section{Was sind Kaonen}
+  \begin{frame}{Was sind Kaonen?}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{figure}[ht]
+          \begin{center}
+            \includegraphics[height=0.6\textheight]{Images/Kaonen.png}
+            \caption{Übersicht über die Kaonen}
+          \end{center}
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        Kaonen:
+        \begin{itemize}
+          \item sind die leichtesten Teilchen mit Strangeness $S = \pm1$
+          \item besitzen einen ganzzahligen Spin
+          \item sind Bosonen
+          \item verfügen über eine relativ lange Lebensdauer
+        \end{itemize}
+        \begin{table}
+          \centering
+          \begin{tabular}{
+              S[table-format=6.0]
+              S[table-format=3.5]
+              @{${}\pm{}$}
+              S[table-format=1.5]
+              S[table-format=3.4]
+              @{${}\pm{}$}
+              S[table-format=1.4]
+            }
+              \toprule
+              & \multicolumn{2}{c}{$m \:/\: \si{\mega\electronvolt}$} & \multicolumn{2}{c}{$\tau \:/\: 10^{-10} \si{\second}$} \\
+              \midrule
+              $K^{\pm}$   & 493.677 & 0.016 & 123.80 & 0.21 \\
+              $K⁰_{S}$    & 497.614 & 0.024 & 0.8954 & 0.0004 \\
+              $K⁰_{L}$    & 497.614 & 0.024 & 511.6  & 2.1 \\
+              ${\pi}^{\pm}$ & 139.57018 & 0.00035 & 260.33 & 0.05 \\
+              \bottomrule
+          \end{tabular}
+        \end{table}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+\section{Historische Kaonenexperimente}
+  \begin{frame}{Weltkarte}
+    %Hier könnte ihre Weltkarte stehen
+  \end{frame}
+
+  \begin{frame}{Entdeckung der Kaonen}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{figure}[ht]
+          \begin{center}
+            \includegraphics[height=0.6\textheight]{Images/discoverykaon.png}
+            \caption{Nebelkammeraufnahme der kosmischen Höhenstrahlung von Rochester und Butler 1947}
+          \end{center}
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Entdeckung des ersten (neutralen) Kaons 1947 durch George Rochester et. al
+          \item Höhenstrahlung wurde in Nebelkammer untersucht
+          \item Zerfall eines neutralen Teilchens in ein positives und negatives Pion
+          \begin{equation*}
+            K^{0} \rightarrow \pi^{+} \pi^{-}
+          \end{equation*}
+          \item Entdeckung des positiv geladenen Kaons 1949 durch Powell in Kernreaktionen
+          \item Zerfall eines positiven Kaons in zwei positive und ein negatives Pion
+          \begin{equation*}
+            K^{+} \rightarrow \pi^{+} \pi^{+} \pi^{-}
+          \end{equation*}
+        \end{itemize}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{Seltsam lange Lebensdauer}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{figure}[ht]
+          \begin{center}
+            \includegraphics[height=0.6\textheight]{Images/Meson-octet.png} %Zuschnippeln
+            \caption{Der achtfache Weg von Gell-Mann und Ne'eman}
+          \end{center}
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Konnten sehr leicht erzeugt werden (durch starke WW)
+          \item Zerfielen aber sehr langsam $10^{-10}\si{\second}$ (durch schwache WW)
+          \item Durch Gell-Mann 1953 Einführung einer neuen Teilcheneigenschaft/ Quantenzahl, der 'Strangeness' (der achtfache Weg)
+          \item Kaonen sind leichteste Teilchen mit \textbf{S} $= \pm1$ und könnten somit nicht zerfallen, wenn \textbf{S} durch alle Kräfte erhalten wäre
+          \item Einziger Zerfall somit über die flavourändernde schwache WW möglich
+          \item \textbf{S} veranlasste Cabibo 1963 zur Postulierung des Cabibo-Winkels
+        \end{itemize}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{Paritätsverletzung und der Cosmotron}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{figure}[ht]
+          \begin{center}
+            \includegraphics[height=0.6\textheight]{Images/cosmotron.jpg} %Zuschnippeln
+            \caption{Das Cosmotron am Brookhaven National Laboratory (1952-1966)}
+          \end{center}
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Bau des damals leistungsstärksten Proton-Synchrotron mit Strahlenergien von $\SI{3.3}{\giga\electronvolt}$ im Jahr 1952
+          \item Erstmals Produktion von schweren Teilchen der kosmischen Höhenstrahlung möglich
+          \item Entdeckung des $K_{l}$
+          \item Beobachtung der Paritätsverletzung 1956 durch T.D. Lee und C.N.Yang
+          \begin{equation*}
+            \tau^{+} \rightarrow \pi^{+} \pi^{+} \pi^{-}
+          \end{equation*}
+          \begin{equation*}
+            \theta^{+} \rightarrow \pi^{+} \pi^{0}
+          \end{equation*}
+          \item $\tau^{+}$ und $\theta^{+}$ tatsächlich ein Teilchen $K^{+}$, die Zerfälle verletzen also die Paritätserhaltung
+        \end{itemize}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{Long und short?}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{figure}[ht]
+          \feynmandiagram[layered layout, horizontal=a to b]{
+            i1 [particle=\(d\)]
+              -- [fermion] a
+              -- [photon, edge label=\(W^{-}\)] b
+              -- [fermion] f1 [particle=\(\mu^{-}\)],
+            i2 [particle=\(\overline s\)]
+              -- [anti fermion] c
+              -- [photon, edge label'=\(W^{-}\)] d
+              -- [anti fermion] f2 [particle=\(\mu^{+}\)],
+            { [same layer] a -- [fermion, edge label'=\(q\)] c },
+            { [same layer] b -- [anti fermion, edge label=\(\nu_{\mu}\)] d}
+          };
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Die Flavour-Eigenzustände $\ket{K^{0}}$, $\ket{\overline{K^{0}}}$ unterscheiden sich von den CP-Eigenzuständen:
+          \begin{equation*}
+            \begin{drcases*}
+              CP \ket{K^{0}} = \ket{\overline{K^{0}}} \\
+              CP \ket{\overline{K^{0}}} = \ket{K^{0}}
+            \end{drcases*}
+            \rightarrow
+            \begin{cases}
+              \ket{K_1} = \frac{1}{\sqrt{2}}\left(\ket{K^{0}} + \ket{\overline{K^{0}}} \right) \\
+              \ket{K_2} = \frac{1}{\sqrt{2}}\left(\ket{K^{0}} - \ket{\overline{K^{0}}} \right)
+            \end{cases}
+          \end{equation*}
+          \item Dabei ist $\ket{K_1} = \ket{K_{s}}$ und $\ket{K_2} = \ket{K_{l}}$, mit $\tau(\ket{K_{l}}) \approx 600 \times \tau(\ket{K_{s}})$
+          \item Für gleich wichtig: $\ket{K_{s}}$ hat CP = +1 und $\ket{K_{l}}$ hat CP =-1
+        \end{itemize}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{Mischung neutraler Kaonen}
+    \begin{figure}[ht]
+      \centering
+      %\feynmandiagram[horizontal=a to b] {
+      %  i1 [particle=$\symup{e}^-$]
+      %    -- [fermion] a
+      %    -- [fermion] i2 [particle=$\symup{e}^+$],
+      %  a --[photon, edge label=$\symup{γ}$] b,
+      %  f1 [particle=$\symup{μ}^-$]
+      %    -- [fermion] b
+      %    -- [fermion] f2 [particle=$\symup{μ}^+$],
+      %}:
+      \feynmandiagram[layered layout, horizontal=a to b]{
+        i1 [particle=\(d\)]
+          -- [fermion] a
+          -- [photon, edge label=\(W^{-}\)] b
+          -- [fermion] f1 [particle=\(\mu^{-}\)],
+        i2 [particle=\(\overline s\)]
+          -- [anti fermion] c
+          -- [photon, edge label'=\(W^{-}\)] d
+          -- [anti fermion] f2 [particle=\(\mu^{+}\)],
+        { [same layer] a -- [fermion, edge label'=\(q\)] c },
+        { [same layer] b -- [anti fermion, edge label=\(\nu_{\mu}\)] d}
+      };
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Regeneration}
+
+  \end{frame}
+
+  \begin{frame}{CP- Verletzung}
+
+  \end{frame}
+
+  \begin{frame}{Direkte CP- Verletzung}
+
+  \end{frame}
+
+%\section{Kaptel 2}
+  %\begin{frame}{Folie 2.1}
+    %Text
+  %\end{frame}
+
+\end{document}
