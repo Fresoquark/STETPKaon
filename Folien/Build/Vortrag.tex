@@ -186,7 +186,7 @@
         \begin{itemize}
           \item Bau des damals leistungsstärksten Proton-Synchrotron mit Strahlenergien von $\SI{3.3}{\giga\electronvolt}$ im Jahr 1952
           \item Erstmals Produktion von schweren Teilchen der kosmischen Höhenstrahlung möglich
-          \item Entdeckung des $K_{l}$
+          \item Entdeckung des $K_{l}$ 1956 durch Lande in Nebelkammer
           \item Beobachtung der Paritätsverletzung 1956 durch T.D. Lee und C.N.Yang
           \begin{equation*}
             \tau^{+} \rightarrow \pi^{+} \pi^{+} \pi^{-}
@@ -200,21 +200,35 @@
     \end{columns}
   \end{frame}
 
-  \begin{frame}{Long und short?}
+  \begin{frame}{Long und short? Die Mischung neutraler Kaonen}
     \begin{columns}[onlytextwidth]
       \begin{column}{0.4\textwidth}
         \begin{figure}[ht]
-          \feynmandiagram[layered layout, horizontal=a to b]{
+          \feynmandiagram[layered layout, horizontal=a to b, scale=0.9]{
             i1 [particle=\(d\)]
               -- [fermion] a
               -- [photon, edge label=\(W^{-}\)] b
-              -- [fermion] f1 [particle=\(\mu^{-}\)],
+              -- [fermion] f1 [particle=\(\overline s\)],
             i2 [particle=\(\overline s\)]
               -- [anti fermion] c
               -- [photon, edge label'=\(W^{-}\)] d
-              -- [anti fermion] f2 [particle=\(\mu^{+}\)],
-            { [same layer] a -- [fermion, edge label'=\(q\)] c },
-            { [same layer] b -- [anti fermion, edge label=\(\nu_{\mu}\)] d}
+              -- [anti fermion] f2 [particle=\(d\)],
+            { [same layer] a -- [fermion, edge label'=\(u\, c\, t\)] c },
+            { [same layer] b -- [anti fermion, edge label=\(u\, c\, t\)] d}
+          };
+        \end{figure}
+        \begin{figure}[ht]
+          \feynmandiagram[layered layout, horizontal=a to b, scale=0.9]{
+            i1 [particle=\(d\)]
+              -- [fermion] a
+              -- [fermion, edge label=\(u\, c\, t\)] b
+              -- [fermion] f1 [particle=\(\overline s\)],
+            i2 [particle=\(\overline s\)]
+              -- [anti fermion] c
+              -- [anti fermion, edge label'=\(u\, c\, t\)] d
+              -- [anti fermion] f2 [particle=\(d\)],
+            { [same layer] a -- [photon, edge label'=\(W^{-}\)] c },
+            { [same layer] b -- [photon, edge label=\(W^{-}\)] d}
           };
         \end{figure}
       \end{column}
@@ -232,45 +246,50 @@
               \ket{K_2} = \frac{1}{\sqrt{2}}\left(\ket{K^{0}} - \ket{\overline{K^{0}}} \right)
             \end{cases}
           \end{equation*}
-          \item Dabei ist $\ket{K_1} = \ket{K_{s}}$ und $\ket{K_2} = \ket{K_{l}}$, mit $\tau(\ket{K_{l}}) \approx 600 \times \tau(\ket{K_{s}})$
+          \item Dabei ist $\ket{K_1} \approx \ket{K_{s}}$ und $\ket{K_2} \approx \ket{K_{l}}$, mit $\tau(\ket{K_{l}}) \approx 600 \times \tau(\ket{K_{s}})$
           \item Für gleich wichtig: $\ket{K_{s}}$ hat CP = +1 und $\ket{K_{l}}$ hat CP =-1
+          \item Unterschied vor allem in Zerfallsmoden:
+          \begin{align*}
+            \ket{K_{s}} &\rightarrow \pi^{+} \pi^{-} \\ %Mehr Möglichkeiten im Phasenraum
+            \ket{K_{l}} &\rightarrow \pi^{+} \pi^{-} \pi^{0} %Eigentlich verboten, s.h. später
+          \end{align*}
         \end{itemize}
       \end{column}
     \end{columns}
   \end{frame}
 
-  \begin{frame}{Mischung neutraler Kaonen}
+  \begin{frame}{CP - Verletzung}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{figure}[ht]
+          \begin{center}
+            \includegraphics[height=0.6\textheight]{Images/croninfitch.png} %Zuschnippeln
+            \caption{Das Cronin-Fitch-Experiment am Brookhaven National Laboratory (1964)}
+          \end{center}
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Christenson, Cronin, Fitch und Turlay planen 1964 Experiment am Brookhaven National Laboratory %Collimator => Bündelung de Teilchenstrahlen
+          \item $\SI{17}{\metre}$ lange Beamline in der alle $\ket{K_{s}}$ zerfallen sollen und nur noch $\Ket{K_{l}}$ übrig bleiben
+          \item Hauptsächlich wird der Winkel $\theta$ zwischen dem $K_{l}^{0}$-Strahl und den Teilchenimpulsen gemssen.
+          \item Treffen zwei Teilchen 'gleichzeitig' den Detektor so kann die Summe der Winkel bestimmt werden
+          \item Diese ist für einen Dreikörperzerfall mit großer Wahrscheinlichkeit $\neq 0$ für Zweikörperzerfälle hingegen mit großer Wahrscheinlichkeit $= 0$
+        \end{itemize}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{Ergebnis}
     \begin{figure}[ht]
-      \centering
-      %\feynmandiagram[horizontal=a to b] {
-      %  i1 [particle=$\symup{e}^-$]
-      %    -- [fermion] a
-      %    -- [fermion] i2 [particle=$\symup{e}^+$],
-      %  a --[photon, edge label=$\symup{γ}$] b,
-      %  f1 [particle=$\symup{μ}^-$]
-      %    -- [fermion] b
-      %    -- [fermion] f2 [particle=$\symup{μ}^+$],
-      %}:
-      \feynmandiagram[layered layout, horizontal=a to b]{
-        i1 [particle=\(d\)]
-          -- [fermion] a
-          -- [photon, edge label=\(W^{-}\)] b
-          -- [fermion] f1 [particle=\(\mu^{-}\)],
-        i2 [particle=\(\overline s\)]
-          -- [anti fermion] c
-          -- [photon, edge label'=\(W^{-}\)] d
-          -- [anti fermion] f2 [particle=\(\mu^{+}\)],
-        { [same layer] a -- [fermion, edge label'=\(q\)] c },
-        { [same layer] b -- [anti fermion, edge label=\(\nu_{\mu}\)] d}
-      };
+      \begin{center}
+        \includegraphics[height=\textheight]{Images/croninfitch_erg.png}
+        \caption{Ergebnis der Winkelmessung}
+      \end{center}
     \end{figure}
   \end{frame}
 
   \begin{frame}{Regeneration}
-
-  \end{frame}
-
-  \begin{frame}{CP- Verletzung}
 
   \end{frame}
 
