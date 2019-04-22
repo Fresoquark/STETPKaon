@@ -186,7 +186,7 @@
         \begin{itemize}
           \item Bau des damals leistungsstärksten Proton-Synchrotron mit Strahlenergien von $\SI{3.3}{\giga\electronvolt}$ im Jahr 1952
           \item Erstmals Produktion von schweren Teilchen der kosmischen Höhenstrahlung möglich
-          \item Entdeckung des $K_{l}$ 1956 durch Lande in Nebelkammer
+          \item Entdeckung des $K_{L}$ 1956 durch Lande in Nebelkammer
           \item Beobachtung der Paritätsverletzung 1956 durch T.D. Lee und C.N.Yang
           \begin{equation*}
             \tau^{+} \rightarrow \pi^{+} \pi^{+} \pi^{-}
@@ -246,12 +246,12 @@
               \ket{K_2} = \frac{1}{\sqrt{2}}\left(\ket{K^{0}} - \ket{\overline{K^{0}}} \right)
             \end{cases}
           \end{equation*}
-          \item Dabei ist $\ket{K_1} \approx \ket{K_{s}}$ und $\ket{K_2} \approx \ket{K_{l}}$, mit $\tau(\ket{K_{l}}) \approx 600 \times \tau(\ket{K_{s}})$
-          \item Für gleich wichtig: $\ket{K_{s}}$ hat CP = +1 und $\ket{K_{l}}$ hat CP =-1
+          \item Dabei ist $\ket{K_1} \approx \ket{K_{S}}$ und $\ket{K_2} \approx \ket{K_{L}}$, mit $\tau(\ket{K_{L}}) \approx 600 \times \tau(\ket{K_{S}})$
+          \item $\ket{K_{S}}$ hatben CP = +1 und $\ket{K_{L}}$ habe CP =-1
           \item Unterschied vor allem in Zerfallsmoden:
           \begin{align*}
-            \ket{K_{s}} &\rightarrow \pi^{+} \pi^{-} \\ %Mehr Möglichkeiten im Phasenraum
-            \ket{K_{l}} &\rightarrow \pi^{+} \pi^{-} \pi^{0} %Eigentlich verboten, s.h. später
+            \ket{K_{S}} &\rightarrow \pi^{+} \pi^{-} \\ %Mehr Möglichkeiten im Phasenraum
+            \ket{K_{L}} &\rightarrow \pi^{+} \pi^{-} \pi^{0} %Eigentlich verboten, s.h. später
           \end{align*}
         \end{itemize}
       \end{column}
@@ -271,9 +271,9 @@
       \begin{column}{0.5\textwidth}
         \begin{itemize}
           \item Christenson, Cronin, Fitch und Turlay planen 1964 Experiment am Brookhaven National Laboratory %Collimator => Bündelung de Teilchenstrahlen
-          \item $\SI{17}{\metre}$ lange Beamline in der alle $\ket{K_{s}}$ zerfallen sollen und nur noch $\Ket{K_{l}}$ übrig bleiben
-          \item Hauptsächlich wird der Winkel $\theta$ zwischen dem $K_{l}^{0}$-Strahl und den Teilchenimpulsen gemssen.
-          \item Treffen zwei Teilchen 'gleichzeitig' den Detektor so kann die Summe der Winkel bestimmt werden
+          \item $\SI{17}{\metre}$ lange Beamline in der alle $\ket{K_{S}}$ zerfallen sollen und nur noch $\Ket{K_{L}}$ übrig bleiben
+          \item Hauptsächlich wird der Winkel $\theta$ zwischen dem $K_{L}^{0}$-Strahl und den Teilchenimpulsen gemessen.
+          \item Treffen zwei Teilchen 'gleichzeitig' den Detektor so kann die Summe der Winkel bestimmt werden (aus Spurdetektion)
           \item Diese ist für einen Dreikörperzerfall mit großer Wahrscheinlichkeit $\neq 0$ für Zweikörperzerfälle hingegen mit großer Wahrscheinlichkeit $= 0$
         \end{itemize}
       \end{column}
@@ -281,16 +281,50 @@
   \end{frame}
 
   \begin{frame}{Ergebnis}
-    \begin{figure}[ht]
-      \begin{center}
-        \includegraphics[height=\textheight]{Images/croninfitch_erg.png}
-        \caption{Ergebnis der Winkelmessung}
-      \end{center}
-    \end{figure}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{figure}[ht]
+          \begin{center}
+            \includegraphics[height=\textheight]{Images/croninfitch_erg.png}
+            \caption{Ergebnis der Winkelmessung}
+          \end{center}
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Es wurden tatsächlich Zerfälle von
+          \begin{align*}
+            K_{L} \rightarrow \pi^{+} \pi^{-}
+            \shortintertext{beobachtet.}
+          \end{align*}
+        \end{itemize}
+      \end{column}
+    \end{columns}
   \end{frame}
 
-  \begin{frame}{Regeneration}
+  \begin{frame}{Wie kann das sein?}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{figure}[ht]
+          \begin{center}
+            \includegraphics[height=\textheight]{Images/croninfitch_erg.png}
+            \caption{Ergebnis der Winkelmessung}
+          \end{center}
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
 
+          \item Konsequenz: $\ket{K_{S}}$ und $\Ket{K_{L}}$ keine reinen CP- Zustände
+        \end{itemize}
+        \rightarrow In beiden Zuständen sind kleine Teile des jeweils anderen Zustands enthalten:
+        \begin{align*}
+          \ket{K_{L}^0} &= \frac{\epsilon \ket{K_1} + \ket{K_2}}{\sqrt{1 + \epsilon^2}} \\
+          \ket{K_{S}^0} &= \frac{\ket{K_1} + \epsilon \ket{K_2}}{\sqrt{1 + \epsilon^2}} \\
+          |\epsilon| &= (2.229\pm0.010)\times10^{-3}
+        \end{align*}
+      \end{column}
+    \end{columns}
   \end{frame}
 
   \begin{frame}{Direkte CP- Verletzung}
