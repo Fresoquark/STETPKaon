@@ -328,27 +328,6 @@
     \begin{columns}[onlytextwidth]
       \begin{column}{0.4\textwidth}
         \begin{figure}[ht]
-          %\feynmandiagram[layered layout, horizontal=a to b, scale=0.9]{
-          %  %i2 [particle=\(\overline s\)]
-          %  %  -- [anti fermion] c
-          %  %  -- [photon, edge label=\(W^{-}\)] d
-          %  %  -- [anti fermion] f2 [particle=\(\overline s\)],
-          %  %i1 [particle=\(d\)]
-          %  %  -- [fermion] a
-          %  %  -- [fermion] f1 [particle=\(d\)],
-          %  %c -- [fermion, edge label=\(u\, c\, t\)] e
-          %  %  -- [fermion, edge label=\(u\, c\, t\)] d,
-          %  %e -- [photon, edge label=\(g\, Z\, \gamma\)] a,
-          %  i1 [particle=\(\overline s\)]
-          %    -- [anti fermion] a
-          %    -- [photon, edge label=\(W^{-}\)] b
-          %    -- [anti fermion] f1 [particle=\(\overline s\)],
-          %  b -- [fermion, quarter left] d -- [fermion, quarter left] a,
-          %  c -- [boson] d,
-          %  i2 [particle=\(d\)]
-          %    -- [fermion] c
-          %    -- [fermion] f2 [particle=\(d\)],
-          %};
           \begin{tikzpicture}
             \begin{feynman}
               \vertex(a1){\(\overline s\)};
@@ -399,6 +378,41 @@
         \end{itemize}
       \end{column}
     \end{columns}
+  \end{frame}
+
+  \begin{frame}{Was wird denn da gemessen?}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{align*}
+          \frac{A \left(K_L \rightarrow \pi^0 \pi^0 \right)}{A \left(K_S \rightarrow \pi^0 \pi^0 \right)} &= \epsilon - 2 \epsilon^{\prime} \\
+          \frac{A \left(K_L \rightarrow \pi^+ \pi^- \right)}{A \left(K_S \rightarrow \pi^+ \pi^- \right)} &= \epsilon +  \epsilon^{\prime}
+        \end{align*}
+        \begin{equation*}
+          R = \frac{A \left(K_L \rightarrow \pi^0 \pi^0 \right)}{A \left(K_S \rightarrow \pi^0 \pi^0 \right)} / \frac{A \left(K_L \rightarrow \pi^+ \pi^- \right)}{A \left(K_S \rightarrow \pi^+ \pi^- \right)}
+        \end{equation*}
+        \begin{equation*}
+          \approx 1 - 6 \,\symup{Re}(\epsilon^{\prime} / \epsilon)
+        \end{equation*}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Vorteil: Viele systematische Fehler kürzen sich raus
+          \item Wäre $\epsilon^{\prime} = 0$ so gäbe es keine direkte CP-Verletzung
+          \item Bis in die 90er kein eindeutiges Ergebnis durch Experimente
+        \end{itemize}
+        Theoretische Überlegungen:
+        \begin{itemize}
+          \item Drei Quarkfamilien (Kobayashi und Maskawa, 1973 \rightarrow noch vor Entdeckung des Charm-Quarks)
+        \end{itemize}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \begin{figure}[ht]
+      \includegraphics[height=0.8\textheight]{Images/REEE.png}
+      \caption{Ergebnisse für Re$(\epsilon' / \epsilon) $}
+    \end{figure}
   \end{frame}
 
 %\section{Kaptel 2}
