@@ -325,7 +325,46 @@
   \end{frame}
 
   \begin{frame}{Direkte CP- Verletzung}
-
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{figure}[ht]
+          \feynmandiagram[layered layout, horizontal=a to b, scale=0.9]{
+            %i2 [particle=\(\overline s\)]
+            %  -- [anti fermion] c
+            %  -- [photon, edge label=\(W^{-}\)] d
+            %  -- [anti fermion] f2 [particle=\(\overline s\)],
+            %i1 [particle=\(d\)]
+            %  -- [fermion] a
+            %  -- [fermion] f1 [particle=\(d\)],
+            %c -- [fermion, edge label=\(u\, c\, t\)] e
+            %  -- [fermion, edge label=\(u\, c\, t\)] d,
+            %e -- [photon, edge label=\(g\, Z\, \gamma\)] a,
+            i1 [particle=\(\overline s\)]
+              -- [anti fermion] a
+              -- [photon, edge label=\(W^{-}\)] b
+              -- [anti fermion] f1 [particle=\(\overline s\)],
+            b -- [fermion, quarter left] d -- [fermion, quarter left] a,
+            c -- [boson] d,
+            i2 [particle=\(d\)]
+              -- [fermion] c
+              -- [fermion] f2 [particle=\(d\)],
+          };
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Direkte CP-Verlezung würde eine CP-Verletzung innerhalb des Zerfalls ohne vorherige Mischung der Kaonen voraussetzen
+          \item Messung der partiellen Zerfallsbreiten von:
+          \begin{align*}
+            K_{L}^0 &\rightarrow \pi^+ \pi^- \\
+            K_{L}^0 &\rightarrow \pi^0 \pi^0 \\
+            K_{S}^0 &\rightarrow \pi^+ \pi^- \\
+            K_{S}^0 &\rightarrow \pi^0 \pi^0
+          \end{align*}
+          \item Es muss das Verhältnis gebildet werden, da sowohl Anteile der direkten als auch der indirekten Verletzung eine Rolle spielen müssen
+        \end{itemize}
+      \end{column}
+    \end{columns}
   \end{frame}
 
 %\section{Kaptel 2}
