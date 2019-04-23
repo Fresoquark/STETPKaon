@@ -328,32 +328,66 @@
     \begin{columns}[onlytextwidth]
       \begin{column}{0.4\textwidth}
         \begin{figure}[ht]
-          \feynmandiagram[layered layout, horizontal=a to b, scale=0.9]{
-            %i2 [particle=\(\overline s\)]
-            %  -- [anti fermion] c
-            %  -- [photon, edge label=\(W^{-}\)] d
-            %  -- [anti fermion] f2 [particle=\(\overline s\)],
-            %i1 [particle=\(d\)]
-            %  -- [fermion] a
-            %  -- [fermion] f1 [particle=\(d\)],
-            %c -- [fermion, edge label=\(u\, c\, t\)] e
-            %  -- [fermion, edge label=\(u\, c\, t\)] d,
-            %e -- [photon, edge label=\(g\, Z\, \gamma\)] a,
-            i1 [particle=\(\overline s\)]
-              -- [anti fermion] a
-              -- [photon, edge label=\(W^{-}\)] b
-              -- [anti fermion] f1 [particle=\(\overline s\)],
-            b -- [fermion, quarter left] d -- [fermion, quarter left] a,
-            c -- [boson] d,
-            i2 [particle=\(d\)]
-              -- [fermion] c
-              -- [fermion] f2 [particle=\(d\)],
-          };
+          %\feynmandiagram[layered layout, horizontal=a to b, scale=0.9]{
+          %  %i2 [particle=\(\overline s\)]
+          %  %  -- [anti fermion] c
+          %  %  -- [photon, edge label=\(W^{-}\)] d
+          %  %  -- [anti fermion] f2 [particle=\(\overline s\)],
+          %  %i1 [particle=\(d\)]
+          %  %  -- [fermion] a
+          %  %  -- [fermion] f1 [particle=\(d\)],
+          %  %c -- [fermion, edge label=\(u\, c\, t\)] e
+          %  %  -- [fermion, edge label=\(u\, c\, t\)] d,
+          %  %e -- [photon, edge label=\(g\, Z\, \gamma\)] a,
+          %  i1 [particle=\(\overline s\)]
+          %    -- [anti fermion] a
+          %    -- [photon, edge label=\(W^{-}\)] b
+          %    -- [anti fermion] f1 [particle=\(\overline s\)],
+          %  b -- [fermion, quarter left] d -- [fermion, quarter left] a,
+          %  c -- [boson] d,
+          %  i2 [particle=\(d\)]
+          %    -- [fermion] c
+          %    -- [fermion] f2 [particle=\(d\)],
+          %};
+          \begin{tikzpicture}
+            \begin{feynman}
+              \vertex(a1){\(\overline s\)};
+              \vertex[right=2cm of a1] (a2);
+              \vertex[right=0.5cm of a2] (a3);
+              \vertex[right=0.5cm of a3] (a4);
+              \vertex[right=2cm of a4] (a5){\(\overline d\)};
+
+              \vertex[below=2cm of a1] (b1){\(d\)};
+              \vertex[below=2cm of a5] (b2){\(d\)};
+
+              \vertex[below=1.5em of a5] (c1){\(u\)};
+              \vertex[above=1.5em of b2] (c3){\(\overline u\)};
+              \vertex at ($(c1)!0.5!(c3)- (1cm, 0)$) (c2);
+
+              \diagram* {
+                {[edges=fermion]
+                  (a5)-- (a4)-- (a3)-- (a2)-- (a1),
+                },
+                (b1)-- [fermion] (b2),
+                (c3)-- [fermion,out=180,in=-60] (c2)-- [fermion,out=60,in=180] (c1),
+                (a3)-- [gluon, bend right, edge label'=\(g\, Z\, \gamma\)] (c2),
+                (a4)-- [boson,out=90,in=90,looseness=2.0,edge label'=\(W\)] (a2)
+              };
+
+              \draw[decoration={brace}, decorate] (b1.south west)-- (a1.north west)
+                node[pos=0.5, left] {  \(K^{0}\)};
+              \draw[decoration={brace}, decorate] (a5.north east)-- (c1.south east)
+                node[pos=0.5, right] {  \(\pi^{+}\)};
+              \draw[decoration={brace}, decorate] (c3.north east)-- (b2.south east)
+                node[pos=0.5, right] {  \(\pi^{-}\)};
+            \end{feynman}
+          \end{tikzpicture}
+          \caption{Pinguindiagramm des CP-verletzenden, neutralen Kaonenzerfalls}
         \end{figure}
       \end{column}
       \begin{column}{0.5\textwidth}
         \begin{itemize}
-          \item Direkte CP-Verlezung würde eine CP-Verletzung innerhalb des Zerfalls ohne vorherige Mischung der Kaonen voraussetzen
+          \item Direkte CP-Verletzung würde eine CP-Verletzung innerhalb des Zerfalls ohne vorherige Mischung der Kaonen voraussetzen
           \item Messung der partiellen Zerfallsbreiten von:
           \begin{align*}
             K_{L}^0 &\rightarrow \pi^+ \pi^- \\
