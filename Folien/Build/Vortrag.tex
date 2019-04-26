@@ -741,15 +741,43 @@
   \subsection{Aussehen und Motivation}
 
   \begin{frame}{Aussehen und Motivation}
-    \begin{figure}[ht]
-      \feynmandiagram[vertical=e to f] {
-      a -- [fermion, edge label=\(s\)] b -- [photon, edge label=\(W\)] c -- [fermion, edge label=\(d\)] d,
-      b -- [fermion, edge label'=\(t\)] e -- [fermion, edge label'=\(t\)] c,
-      e -- [boson, edge label=\(Z\)] f,
-      h -- [fermion, edge label=\(\bar{\nu}\)] f -- [fermion, edge label=\(\nu\)] i;
-      };
-      \caption{Pinguindiagramm des CP-verletzenden, neutralen Kaonenzerfalls}
-    \end{figure}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.3\textwidth}
+        \begin{figure}[ht]
+          \feynmandiagram[vertical=e to f] {
+          a -- [fermion, edge label=\(s\)] b -- [boson, edge label=\(W\)] c -- [fermion, edge label=\(d\)] d,
+          b -- [fermion, edge label'=\(t\)] e -- [fermion, edge label'=\(t\)] c,
+          e -- [boson, edge label=\(Z\)] f,
+          h -- [fermion, edge label=\(\bar{\nu}\)] f -- [fermion, edge label=\(\nu\)] i;
+          };
+        \end{figure}
+      \end{column}
+      \begin{column}{0.3\textwidth}
+        \begin{figure}[ht]
+          \feynmandiagram[vertical=e to f] {
+          a -- [fermion, edge label=\(s\)] b -- [fermion, edge label=\(t\)] c -- [fermion, edge label=\(d\)] d,
+          b -- [boson, edge label'=\(W\)] e -- [boson, edge label'=\(W\)] c,
+          e -- [boson, edge label=\(Z\)] f,
+          h -- [fermion, edge label=\(\bar{\nu}\)] f -- [fermion, edge label=\(\nu\)] i;
+          };
+        \end{figure}
+      \end{column}
+      \begin{column}{0.3\textwidth}
+        \begin{figure}[ht]
+          \feynmandiagram[vertical=e to f] {
+          a -- [anti fermion, edge label=\(d\)] b -- [boson, edge label=\(W\)] c -- [anti fermion, edge label=\(\bar{\nu}\)] d,
+          b -- [anti fermion, edge label'=\(t\)] e,
+          c -- [fermion, edge label'=\(l\)] f,
+          e -- [boson, edge label=\(W\)] f,
+          h -- [anti fermion, edge label=\(\nu\)] f,
+          e -- [anti fermion, edge label=\(s\)] i;
+          };
+        \end{figure}
+      \end{column}
+    \end{columns}
+    \begin{center}
+      Nur Pinguin- und Boxdiagramme $\rightarrow$ hohe Sensitivität zu neuer Physik
+    \end{center}
   \end{frame}
 
 
