@@ -46,7 +46,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Titel:
-\title{Kaonenexperimente im Wandel der Zeit}
+\title{K-Mesonen und wo sie zu finden sind}
 %Autor
 \author[F.~Koch]{Fabian Koch}
 %Datum der Präsentation
@@ -164,10 +164,9 @@
         \begin{itemize}
           \item Sehr leichte Erzeugung (durch starke WW)
           \item Sehr langsamer Zerfall $10^{-10}\si{\second}$ (durch schwache WW)
-          \item Gell-Mann 1953: Einführung einer neuen Teilcheneigenschaft/ Quantenzahl, der 'Strangeness'
-          \item Kaonen leichteste Teilchen mit \textbf{S} $= \pm1$
+          \item Gell-Mann 1953: Einführung einer neuen Teilcheneigenschaft/ Quantenzahl \item[\rightarrow] Strangeness
           \item Zerfall sehr leicht möglich, wenn \textbf{S} durch alle Kräfte erhalten wäre
-          \item Zerfall nur über die flavourändernde schwache WW möglich
+          \item[Aber:] Zerfall nur über die flavourändernde schwache WW möglich
           %\item \textbf{S} veranlasste Cabibo 1963 zur Postulierung des Cabibo-Winkels
         \end{itemize}
       \end{column}
@@ -191,13 +190,12 @@
           \item Leistungsstärkstes Proton-Synchrotron (1952) mit Strahlenergien von $\SI{3.3}{\giga\electronvolt}$
           \item Erstmals Produktion von schweren Teilchen der kosmischen Höhenstrahlung
           \item Entdeckung $K_{L}$ durch Lande (1956) %in Nebelkammer
-          \item Beobachtung der Paritätsverletzung 1956 durch T.D. Lee und C.N.Yang
-          \begin{equation*}
-            \tau^{+} \rightarrow \pi^{+} \pi^{+} \pi^{-}
-          \end{equation*}
-          \begin{equation*}
+          \item Beobachtung der Zerfälle
+          \begin{align*}
+            \tau^{+} \rightarrow \pi^{+} \pi^{+} \pi^{-} \\
             \theta^{+} \rightarrow \pi^{+} \pi^{0}
-          \end{equation*}
+          \end{align*}
+          \item[] durch T.D. Lee und C.N.Yang (1956)
           \item $\tau^{+}$ und $\theta^{+}$ tatsächlich $K^{+}$
           \item[\rightarrow] Zerfälle verletzen die Paritätserhaltung
         \end{itemize}
@@ -376,7 +374,8 @@
       \end{column}
       \begin{column}{0.5\textwidth}
         \begin{itemize}
-          \item Direkte CP-Verletzung setzt Verletzung ohne vorherige Mischung der Kaonen voraus
+          \item Direkte CP-Verletzung:
+          \item[\rightarrow] Keine vorherige Mischung der Kaonen
           \item Messung der partiellen Zerfallsbreiten von:
           \begin{align*}
             K_{L}^0 &\rightarrow \pi^+ \pi^- \\
@@ -384,26 +383,27 @@
             K_{S}^0 &\rightarrow \pi^+ \pi^- \\
             K_{S}^0 &\rightarrow \pi^0 \pi^0
           \end{align*}
-          \item Verhältnis wird gebildet
+          \item Bildung der Verhältnisse
           \item[\rightarrow] Anteile der direkten und indirekten Verletzung spielen eine Rolle
         \end{itemize}
       \end{column}
     \end{columns}
   \end{frame}
 
-  \begin{frame}{Was wird denn da gemessen?}
+  \begin{frame}{Was wird dann gemessen?}
     \begin{columns}[onlytextwidth]
       \begin{column}{0.4\textwidth}
         \begin{align*}
-          \frac{A \left(K_L \rightarrow \pi^0 \pi^0 \right)}{A \left(K_S \rightarrow \pi^0 \pi^0 \right)} &= \epsilon - 2 \epsilon^{\prime} \\
-          \frac{A \left(K_L \rightarrow \pi^+ \pi^- \right)}{A \left(K_S \rightarrow \pi^+ \pi^- \right)} &= \epsilon +  \epsilon^{\prime}
+          \eta_{00} = \frac{A \left(K_L \rightarrow \pi^0 \pi^0 \right)}{A \left(K_S \rightarrow \pi^0 \pi^0 \right)} &= \epsilon - 2 \epsilon^{\prime} \\
+          \eta_{\pm} = \frac{A \left(K_L \rightarrow \pi^+ \pi^- \right)}{A \left(K_S \rightarrow \pi^+ \pi^- \right)} &= \epsilon +  \epsilon^{\prime}
         \end{align*}
         \begin{equation*}
-          R = \frac{A \left(K_L \rightarrow \pi^0 \pi^0 \right)}{A \left(K_S \rightarrow \pi^0 \pi^0 \right)} / \frac{A \left(K_L \rightarrow \pi^+ \pi^- \right)}{A \left(K_S \rightarrow \pi^+ \pi^- \right)}
+          %R = \frac{A \left(K_L \rightarrow \pi^0 \pi^0 \right)}{A \left(K_S \rightarrow \pi^0 \pi^0 \right)} / \frac{A \left(K_L \rightarrow \pi^+ \pi^- \right)}{A \left(K_S \rightarrow \pi^+ \pi^- \right)}
+          \symup{Re}(\epsilon' / \epsilon) = \frac{1}{6} \left\{1 - \left|\frac{\eta_{00}}{\eta_{\pm}}\right|^2 \right\}
         \end{equation*}
-        \begin{equation*}
-          \approx 1 - 6 \,\symup{Re}(\epsilon^{\prime} / \epsilon)
-        \end{equation*}
+        %\begin{equation*}
+        %  \approx 1 - 6 \,\symup{Re}(\epsilon^{\prime} / \epsilon)
+        %\end{equation*}
       \end{column}
       \begin{column}{0.5\textwidth}
         \begin{itemize}
@@ -423,13 +423,6 @@
         \end{itemize}
       \end{column}
     \end{columns}
-  \end{frame}
-
-  \begin{frame}
-    \begin{figure}[ht]
-      \includegraphics[height=0.8\textheight]{Images/REEE.png}
-      \caption{Ergebnisse für Re$(\epsilon' / \epsilon) $}
-    \end{figure}
   \end{frame}
 
   \section{Moderne Experimente}
@@ -462,52 +455,6 @@
       %\item Fixed target mit $\SI{450}{\giga\electronvolt}$ vom SPS
       %\item Gleichzeitige Messung von $\ket{K_L}$ und $\ket{K_S}$ durch Strange-Tagging
     \end{itemize}
-  \end{frame}
-
-  \subsection{KTeV}
-
-  \begin{frame}{Das KTeV-Experiment}
-    \begin{figure}
-      \includegraphics[height=0.8\textheight]{Images/rip.png}
-    \end{figure}
-  \end{frame}
-
-  \begin{frame}
-    \begin{columns}[onlytextwidth]
-      \begin{column}{0.4\textwidth}
-        \begin{figure}[ht]
-          \begin{center}
-            \includegraphics[height=0.6\textheight]{Images/ktevdistance.png} %Zuschnippeln
-            \caption{Konzept des KTeV Experiments}
-          \end{center}
-        \end{figure}
-      \end{column}
-      \begin{column}{0.5\textwidth}
-        \begin{itemize}
-          \item Kaonzerfall im Vakuum um Kollision mit Luft zu verhindern
-          \begin{align*}
-            K^0 &\rightarrow \pi^+ \pi^- \\
-                &\rightarrow \pi^0 \pi^0
-          \end{align*}
-          \item $\pi$-Impulse werden durch die Krümmung ihrer Bahnen gemessen (Magnetfeld)
-          \item Anschließend Spurmessung durch 'wire chambers'
-          \item $\pi$ die Detektor verfehlen, werden simuliert und berücksichtigt
-        \end{itemize}
-      \end{column}
-    \end{columns}
-  \end{frame}
-
-  \begin{frame}
-    \begin{figure}[ht]
-      \includegraphics[height=0.9\textheight]{Images/KTEVDETEKTOR.png}
-      \caption{Detektor des KTeV-Experiments}
-    \end{figure}
-  \end{frame}
-
-  \begin{frame}
-    \begin{figure}
-      \includegraphics[height=0.9\textheight]{Images/ktevdata.png}
-    \end{figure}
   \end{frame}
 
   \subsection{NA48}
@@ -571,6 +518,8 @@
     \end{columns}
   \end{frame}
 
+\subsection{Aufbau des NA48-Detektors}
+
   \begin{frame}{Detektor}
     \begin{figure}[ht]
       \begin{center}
@@ -581,26 +530,22 @@
   \end{frame}
 
   \begin{frame}{Heliumtank}
-    \begin{columns}[onlytextwidth]
-      \begin{column}{0.4\textwidth}
-        \begin{figure}[ht]
-          \begin{center}
-            \vspace*{-1cm}
-            \includegraphics[height=0.8\textheight]{Images/na48helium.png} %Zuschnippeln
-            \caption{Schema des Heliumtanks aus NA48 mit Spektrometern}
-          \end{center}
-        \end{figure}
-      \end{column}
-      \begin{column}{0.5\textwidth}
-        \begin{itemize}
-          \item Geschützt durch hochstabiles Kevlar-Glas
-          \item Atmosphärendruck
-          \item Beherbergt Spektrometer und Wire chambers
-          \item[\rightarrow] Genutzt zur Bestmmung der Winkel von geladenen $\pi$
-          \item[\rightarrow] Beherbergt dafür Eisenjochmagneten
-        \end{itemize}
-      \end{column}
-    \end{columns}
+    \begin{itemize}
+      \item Geschützt durch hochstabiles Kevlar-Glas
+      \item Atmosphärendruck
+      \item Beherbergt Spektrometer und Wire chambers %Driftkammern
+      \item[\rightarrow] Genutzt zur Bestmmung der Winkel von geladenen $\pi$
+      \item[\rightarrow] Beherbergt dafür Eisenjochmagnet ($\SI{0.37}{\tesla}$ im Zentrum)
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \begin{figure}[ht]
+      \begin{center}
+        \includegraphics[width=0.9\textwidth]{Images/na48helium.png} %Zuschnippeln
+        \caption{Schema des Heliumtanks aus NA48 mit Spektrometern}
+      \end{center}
+    \end{figure}
   \end{frame}
 
   \begin{frame}{Hodoskop}
@@ -618,7 +563,7 @@
         \begin{itemize}
           \item Griechisch für Pfadseher
           \item System aus Plastik-Szintillatoren und Photomultipliern
-          \item[\rightarrow] 64x64 im Abstand von $\SI{74}{\centi\metre}$
+          \item[\rightarrow] 64x64 Szintillatoren im Abstand von $\SI{74}{\centi\metre}$
           \item Signal für Zerfall in geladene $\pi$
         \end{itemize}
       \end{column}
@@ -631,7 +576,7 @@
         \begin{figure}[ht]
           \begin{center}
             \includegraphics[height=0.7\textheight]{Images/na48lkr.png} %Zuschnippeln
-            \caption{Das LKR-Kalorimeter vor dem Einbau}
+            \caption{Das LKr-Kalorimeter vor dem Einbau}
           \end{center}
         \end{figure}
       \end{column}
@@ -682,8 +627,9 @@
         K_S \rightarrow \mu \mu \mu
       \end{equation*}
       \item[] Zerfällen
-      \item Ausgestattet mit Szintillatotions-Hodoskopen zur Bahnberechnung
+      \item Ausgestattet mit Szintillations-Hodoskopen zur Bahnberechnung
       \item Abgeschirmt durch dicke Eisenwände
+      \item[\rightarrow] Anordnung analog zu neueren Experimenten, z.B. LHCb und ATLAS
     \end{itemize}
   \end{frame}
 
@@ -699,7 +645,7 @@
       \end{column}
       \begin{column}{0.5\textwidth}
         \begin{itemize}
-          \item Veto von Zerfällen außerhalb der Wire-Chambers und Kalorimetern
+          \item Veto-Trigger von Zerfällen außerhalb der Wire-Chambers und Kalorimetern
           \item[\rightarrow] Veto von Zerfällen in geladen Teilchen
         \end{itemize}
       \end{column}
@@ -725,11 +671,87 @@
     \end{columns}
   \end{frame}
 
-  \begin{frame}{Ergebnisse beider Experimente}
+  \subsection{KTeV}
+
+  \begin{frame}{Das KTeV-Experiment}
     \begin{figure}
-      \includegraphics[height=0.8\textheight]{Images/resultsreee.png}
+      \includegraphics[height=0.8\textheight]{Images/rip.png}
     \end{figure}
   \end{frame}
+
+  \begin{frame}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.4\textwidth}
+        \begin{figure}[ht]
+          \begin{center}
+            \includegraphics[height=0.6\textheight]{Images/ktevdistance.png} %Zuschnippeln
+            \caption{Konzept des KTeV Experiments}
+          \end{center}
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Kaonzerfall im Vakuum um Kollision mit Luft zu verhindern
+          \begin{align*}
+            K^0 &\rightarrow \pi^+ \pi^- \\
+                &\rightarrow \pi^0 \pi^0
+          \end{align*}
+          \item $\pi$-Impulse werden durch die Krümmung ihrer Bahnen gemessen (Magnetfeld)
+          \item Anschließend Spurmessung durch 'wire chambers'
+          \item $\pi$ die Detektor verfehlen, werden simuliert und berücksichtigt
+        \end{itemize}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \begin{figure}[ht]
+      \includegraphics[height=0.8\textheight]{Images/KTEVDETEKTOR.png}
+      \caption{Detektor des KTeV-Experiments}
+    \end{figure}
+  \end{frame}
+
+  \subsection{Ergebnisse von KTeV und NA48}
+
+  \begin{frame}{Ergebnisse beider Experimente}
+    \begin{figure}
+      \includegraphics[height=0.8\textheight]{Images/ktevdata.png}
+      \caption{Massenverteilung von KTeV}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}
+    \begin{figure}
+      \includegraphics[height=0.7\textheight]{Images/ktevaverage.png}
+    \end{figure}
+    KTeV Ergebnis: Re$(\epsilon' / \epsilon) = (19.2\pm2.1) \times 10^{-4}$ (Stand: 2009)
+    \newline
+    Weltdurchschnitt: Re$(\epsilon' / \epsilon) = (16.8\pm1.4) \times 10^{-4}$
+  \end{frame}
+
+  \begin{frame}
+    \begin{figure}[ht]
+      \includegraphics[height=0.8\textheight]{Images/REEE.png}
+      \caption{Ergebnisse für Re$(\epsilon' / \epsilon) $}
+    \end{figure}
+  \end{frame}
+
+\section{Seltene Zerfälle}
+
+  \subsection{Aussehen und Motivation}
+
+  \begin{frame}{Aussehen und Motivation}
+    \begin{figure}[ht]
+      \feynmandiagram[vertical=e to f] {
+      a -- [fermion, edge label=\(s\)] b -- [photon, edge label=\(W\)] c -- [fermion, edge label=\(d\)] d,
+      b -- [fermion, edge label'=\(t\)] e -- [fermion, edge label'=\(t\)] c,
+      e -- [boson, edge label=\(Z\)] f,
+      h -- [fermion, edge label=\(\bar{\nu}\)] f -- [fermion, edge label=\(\nu\)] i;
+      };
+      \caption{Pinguindiagramm des CP-verletzenden, neutralen Kaonenzerfalls}
+    \end{figure}
+  \end{frame}
+
 
 
 %\section{Kaptel 2}
