@@ -40,6 +40,12 @@
 \usepackage{bookmark}
 \usepackage{subfigure}
 \usepackage{booktabs}
+%Literatuverzeichnis
+\usepackage[
+  backend=biber,
+]{biblatex}
+%Quellendatenbank
+\addbibresource{lit.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%-------------Hier Titel/Autor/Grafik/Lehrstuhl eintragen--------------%%%%%
@@ -79,7 +85,7 @@
         \begin{figure}[ht]
           \begin{center}
             \includegraphics[height=0.6\textheight]{Images/Kaonen.png}
-            \caption{Übersicht über die Kaonen}
+            \caption{Übersicht über die Kaonen\cite[7]{KOTOPress}}
           \end{center}
         \end{figure}
       \end{column}
@@ -89,7 +95,7 @@
           \item sind die leichtesten Teilchen mit Strangeness $S = \pm1$
           \item besitzen einen ganzzahligen Spin
           \item sind Bosonen
-          \item verfügen über eine relativ lange Lebensdauer
+          \item verfügen über eine relativ lange Lebensdauer\cite{PDG}
         \end{itemize}
         \begin{table}
           \centering
@@ -128,7 +134,7 @@
         \begin{figure}[ht]
           \begin{center}
             \includegraphics[height=0.6\textheight]{Images/Kaondiscovery.png}
-            \caption{Nebelkammeraufnahme der kosmischen Höhenstrahlung von Rochester und Butler 1947}
+            \caption{Nebelkammeraufnahme der kosmischen Höhenstrahlung von Rochester und Butler 1947\cite[4]{Ceccucci1}}
           \end{center}
         \end{figure}
       \end{column}
@@ -156,7 +162,7 @@
         \begin{figure}[ht]
           \begin{center}
             \includegraphics[height=0.6\textheight]{Images/Meson-octet.png} %Zuschnippeln
-            \caption{Der achtfache Weg von Gell-Mann und Ne'eman}
+            \caption{Der achtfache Weg von Gell-Mann und Ne'eman\cite{oktett}}
           \end{center}
         \end{figure}
       \end{column}
@@ -181,7 +187,7 @@
         \begin{figure}[ht]
           \begin{center}
             \includegraphics[height=0.6\textheight]{Images/cosmotron.jpg} %Zuschnippeln
-            \caption{Das Cosmotron am Brookhaven National Laboratory (1952-1966)}
+            \caption{Das Cosmotron am Brookhaven National Laboratory (1952-1966)\cite{cosmotron}}
           \end{center}
         \end{figure}
       \end{column}
@@ -1022,16 +1028,9 @@
   \end{frame}
   %https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.021802
 
-  \subsection{Weitere Experimente}
-
-  \begin{frame}{Weitere Experimente}
-    KLOE II
-    \begin{itemize}
-      \item
-    \end{itemize}
+  \begin{frame}
+    \printbibliography
   \end{frame}
-
-
 
 
 

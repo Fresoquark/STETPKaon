@@ -17,7 +17,7 @@ clean:
 
 
 .DELETE_ON_ERROR:
-Vortrag.pdf: Vortrag.tex |build
+Vortrag.pdf: Vortrag.tex lit.bib |build
 	@TEXINPUTS="$(call translate,build:)" lualatex \
 	  --output-directory=build \
 	  --interaction=nonstopmode \
@@ -29,6 +29,9 @@ Vortrag.pdf: Vortrag.tex |build
 	  --interaction=nonstopmode \
 	  --halt-on-error \
 	Vortrag.tex>/dev/null
+	@echo
+	@BIBINPUTS=build: biber build/Vortrag.bcf|grep -i -e'biber' -e'error' -e'errors' -e'warn' -e'warnings' --color=auto
+	@echo
 	@lualatex \
 	  --output-directory=build \
 	  --interaction=nonstopmode \
