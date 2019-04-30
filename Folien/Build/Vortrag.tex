@@ -130,6 +130,7 @@
   \end{frame}
 
 \subsection{Entdeckung der Kaonen}
+
   \begin{frame}{Entdeckung der Kaonen}
     \begin{columns}[onlytextwidth]
       \begin{column}{0.4\textwidth}
@@ -173,9 +174,9 @@
       \begin{column}{0.5\textwidth}
         \begin{itemize}
           \item Sehr leichte Erzeugung (durch starke WW)
-          \item Sehr langsamer Zerfall $10^{-10}\si{\second}$ (durch schwache WW)
+          \item Große Halbwertszeit $10^{-10}\si{\second}$ (durch schwache WW)
           \item Gell-Mann 1953: Einführung einer neuen Teilcheneigenschaft/ Quantenzahl \item[\rightarrow] Strangeness
-          \item Zerfall sehr leicht möglich, wenn \textbf{S} durch alle Kräfte erhalten wäre
+          \item Zerfall leicht möglich, wenn \textbf{S} durch alle Kräfte verletzt wäre
           \item[Aber:] Zerfall nur über die flavourändernde schwache WW möglich
           %\item \textbf{S} veranlasste Cabibo 1963 zur Postulierung des Cabibo-Winkels
         \end{itemize}
@@ -199,7 +200,8 @@
       \begin{column}{0.5\textwidth}
         \begin{itemize}
           \item Leistungsstärkstes Proton-Synchrotron (1952) mit Strahlenergien von $\SI{3.3}{\giga\electronvolt}$
-          \item Erstmals Produktion von schweren Teilchen der kosmischen Höhenstrahlung
+          %\item Erstmals Produktion von schweren Teilchen der kosmischen Höhenstrahlung
+          \item Erstmalige Produktion von Mesonen und leichten Hadronen im Labor
           \item Entdeckung $K_{L}$ durch Lande (1956) %in Nebelkammer
           \item Beobachtung der Zerfälle
           \begin{align*}
@@ -224,11 +226,11 @@
             i1 [particle=\(d\)]
               -- [fermion] a
               -- [photon, edge label=\(W^{-}\)] b
-              -- [fermion] f1 [particle=\(\overline s\)],
+              -- [fermion] f1 [particle=\(s\)],
             i2 [particle=\(\overline s\)]
               -- [anti fermion] c
               -- [photon, edge label'=\(W^{-}\)] d
-              -- [anti fermion] f2 [particle=\(d\)],
+              -- [anti fermion] f2 [particle=\(\overline d\)],
             { [same layer] a -- [fermion, edge label'=\(u\, c\, t\)] c },
             { [same layer] b -- [anti fermion, edge label=\(u\, c\, t\)] d}
           };
@@ -238,11 +240,11 @@
             i1 [particle=\(d\)]
               -- [fermion] a
               -- [fermion, edge label=\(u\, c\, t\)] b
-              -- [fermion] f1 [particle=\(\overline s\)],
+              -- [fermion] f1 [particle=\(s\)],
             i2 [particle=\(\overline s\)]
               -- [anti fermion] c
               -- [anti fermion, edge label'=\(u\, c\, t\)] d
-              -- [anti fermion] f2 [particle=\(d\)],
+              -- [anti fermion] f2 [particle=\(\overline d\)],
             { [same layer] a -- [photon, edge label'=\(W^{-}\)] c },
             { [same layer] b -- [photon, edge label=\(W^{-}\)] d}
           };
@@ -262,11 +264,11 @@
               \ket{K_2} = \frac{1}{\sqrt{2}}\left(\ket{K^{0}} - \ket{\overline{K^{0}}} \right)
             \end{cases}
           \end{equation*}
+          \item $\ket{K_{1}}$ haben CP = +1 und $\ket{K_{2}}$ habe CP = -1
           \item Dabei ist $\ket{K_1} \approx \ket{K_{S}}$ und $\ket{K_2} \approx \ket{K_{L}}$
           \begin{equation*}
             \tau(\ket{K_{L}}) \approx 600 \times \tau(\ket{K_{S}})
           \end{equation*}
-          \item $\ket{K_{S}}$ haben CP = +1 und $\ket{K_{L}}$ habe CP = -1
           \item Unterschied vor allem in Zerfallsmoden:
           \begin{align*}
             \ket{K_{S}} &\rightarrow \pi^{+} \pi^{-} \\ %Mehr Möglichkeiten im Phasenraum
@@ -284,7 +286,7 @@
       \begin{column}{0.4\textwidth}
         \begin{figure}[ht]
           \begin{center}
-            \includegraphics[height=0.6\textheight]{Images/croninfitch.png} %Zuschnippeln
+            \includegraphics[height=0.6\textheight]{Images/croninfitch_b.png} %Zuschnippeln
             \caption{Das Cronin-Fitch-Experiment am Brookhaven National Laboratory (1964)}
           \end{center}
         \end{figure}
@@ -347,15 +349,26 @@
     \begin{itemize}
       \item Konsequenz: $\ket{K_{S}}$ und $\Ket{K_{L}}$ keine reinen CP- Eigenzustände
       \item[\rightarrow] Beide Zustände enthalten kleine Teile des anderen Zustands:
-      \begin{align*}
-        \ket{K_{L}^0} &= \frac{\epsilon \ket{K_1} + \ket{K_2}}{\sqrt{1 + \epsilon^2}} \\
-        \ket{K_{S}^0} &= \frac{\ket{K_1} + \epsilon \ket{K_2}}{\sqrt{1 + \epsilon^2}} \\
-        |\epsilon| &= (2.229\pm0.010)\times10^{-3}
-      \end{align*}
-      \item Auftreten von Cp-Verletzung durch Oszillation (indirekt) oder innerhalb eines Zerfalls (direkt)
+    \end{itemize}
+    \begin{columns}[onlytextwidth]
+      \begin{column}{0.5\textwidth}
+        \begin{align*}
+          \ket{K_{L}^0} &= \frac{\epsilon \ket{K_1} + \ket{K_2}}{\sqrt{1 + \epsilon^2}} \\
+          \ket{K_{S}^0} &= \frac{\ket{K_1} + \epsilon \ket{K_2}}{\sqrt{1 + \epsilon^2}}
+        \end{align*}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{align*}
+          \\
+          |\epsilon| = (2.229\pm0.010)\times10^{-3}
+        \end{align*}
+      \end{column}
+    \end{columns}
+    \begin{itemize}
+      \item Auftreten von CP-Verletzung innerhalb von Oszillation (indirekt) oder eines Zerfalls (direkt)
       \item Problem: Im Jahre 1964 noch keine Quarks oder der CKM-Mechanismus bekannt
-      \item[\rightarrow] Es war nur Mischprozess mit komplexer Phase bekannt
       \item Erst 1973: Postulierung der drei Quarkfamilien und des CKM-Mechanismus durch Kobayashi und Maskawa
+      \item[\rightarrow] Grundlage für viele weitere Forschungsprogramme
     \end{itemize}
   \end{frame}
 
@@ -469,7 +482,11 @@
       \end{column}
       \begin{column}{0.5\textwidth}
         \begin{itemize}
-          \item Messung der partiellen Zerfallsbreiten
+          \item Messung der unterschiedlichen partiellen Zerfallsbreiten
+          \begin{align*}
+            \Gamma \left(K_L \rightarrow \pi^0 \pi^0 \right) &\neq \Gamma \left(K_S \rightarrow \pi^0 \pi^0 \right) \\
+            \Gamma \left(K_L \rightarrow \pi^+ \pi^- \right) &\neq \Gamma \left(K_S \rightarrow \pi^+ \pi^- \right)
+          \end{align*}
           \item[\rightarrow] Bilden der Verhältnisse
           \item[Vorteil:] Viele systematische Fehler kürzen sich
           \item $\epsilon^{\prime} = 0$: keine direkte CP-Verletzung
