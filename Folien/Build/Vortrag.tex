@@ -185,7 +185,7 @@
 
 \subsection{Paritätsverletzung}
 
-  \begin{frame}{Paritätsverletzung und der Cosmotron}
+  \begin{frame}{Paritätsverletzung und das Cosmotron}
     \begin{columns}[onlytextwidth]
       \begin{column}{0.4\textwidth}
         \begin{figure}[ht]
@@ -318,7 +318,7 @@
         \newline
         \newline
         \newline
-        Tatsächlich wurd der Zerfall
+        Tatsächlich wurde der Zerfall
         \begin{align*}
           K_{L} \rightarrow \pi^{+} \pi^{-}
         \end{align*}
@@ -327,81 +327,132 @@
     \end{columns}
   \end{frame}
 
+  %\begin{frame}{Wie kann das sein?}
+  %  \begin{itemize}
+  %    \item Konsequenz: $\ket{K_{S}}$ und $\Ket{K_{L}}$ keine reinen CP- Zustände
+  %    \item[\rightarrow] Indirekte CP-Verletzung
+  %    \item[\rightarrow] Beide Zustände enthalten kleine Teile des anderen Zustands:
+  %    \begin{align*}
+  %      \ket{K_{L}^0} &= \frac{\epsilon \ket{K_1} + \ket{K_2}}{\sqrt{1 + \epsilon^2}} \\
+  %      \ket{K_{S}^0} &= \frac{\ket{K_1} + \epsilon \ket{K_2}}{\sqrt{1 + \epsilon^2}} \\
+  %      |\epsilon| &= (2.229\pm0.010)\times10^{-3}
+  %    \end{align*}
+  %    \item Neutrale Kaonenzustände oszillieren über Box-Diagramme und zerfallen
+  %    \item Oder direkte CP-Verletzung über Pinguin- Diagramme
+  %    \item Problem: Im Jahre 1964 noch keine Quarks oder der CKM-Mechanismus bekannt
+  %  \end{itemize}
+  %\end{frame}
+
   \begin{frame}{Wie kann das sein?}
     \begin{itemize}
-      \item Konsequenz: $\ket{K_{S}}$ und $\Ket{K_{L}}$ keine reinen CP- Zustände
-      \item[\rightarrow] Indirekte CP-Verletzung
+      \item Konsequenz: $\ket{K_{S}}$ und $\Ket{K_{L}}$ keine reinen CP- Eigenzustände
       \item[\rightarrow] Beide Zustände enthalten kleine Teile des anderen Zustands:
       \begin{align*}
         \ket{K_{L}^0} &= \frac{\epsilon \ket{K_1} + \ket{K_2}}{\sqrt{1 + \epsilon^2}} \\
         \ket{K_{S}^0} &= \frac{\ket{K_1} + \epsilon \ket{K_2}}{\sqrt{1 + \epsilon^2}} \\
         |\epsilon| &= (2.229\pm0.010)\times10^{-3}
       \end{align*}
-      \item Neutrale Kaonenzustände oszillieren über Box-Diagramme und zerfallen
-      \item Oder direkte CP-Verletzung über Pinguin- Diagramme
+      \item Auftreten von Cp-Verletzung durch Oszillation (indirekt) oder innerhalb eines Zerfalls (direkt)
       \item Problem: Im Jahre 1964 noch keine Quarks oder der CKM-Mechanismus bekannt
+      \item[\rightarrow] Es war nur Mischprozess mit komplexer Phase bekannt
+      \item Erst 1973: Postulierung der drei Quarkfamilien und des CKM-Mechanismus durch Kobayashi und Maskawa
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Direkte CP- Verletzung}
-    \begin{columns}[onlytextwidth]
-      \begin{column}{0.4\textwidth}
-        \begin{figure}[ht]
-          \begin{tikzpicture}
-            \begin{feynman}
-              \vertex(a1){\(\overline s\)};
-              \vertex[right=2cm of a1] (a2);
-              \vertex[right=0.5cm of a2] (a3);
-              \vertex[right=0.5cm of a3] (a4);
-              \vertex[right=2cm of a4] (a5){\(\overline d\)};
+  %\begin{frame}{Direkte CP- Verletzung}
+  %  \begin{columns}[onlytextwidth]
+  %    \begin{column}{0.4\textwidth}
+  %      \begin{figure}[ht]
+  %        \begin{tikzpicture}
+  %          \begin{feynman}
+  %            \vertex(a1){\(\overline s\)};
+  %            \vertex[right=2cm of a1] (a2);
+  %            \vertex[right=0.5cm of a2] (a3);
+  %            \vertex[right=0.5cm of a3] (a4);
+  %            \vertex[right=2cm of a4] (a5){\(\overline d\)};
+  %
+  %            \vertex[below=2cm of a1] (b1){\(d\)};
+  %            \vertex[below=2cm of a5] (b2){\(d\)};
+  %
+  %            \vertex[below=1.5em of a5] (c1){\(u\)};
+  %            \vertex[above=1.5em of b2] (c3){\(\overline u\)};
+  %            \vertex at ($(c1)!0.5!(c3)- (1cm, 0)$) (c2);
+  %
+  %            \diagram* {
+  %              {[edges=fermion]
+  %                (a5)-- (a4)-- (a3)-- (a2)-- (a1),
+  %              },
+  %              (b1)-- [fermion] (b2),
+  %              (c3)-- [fermion,out=180,in=-60] (c2)-- [fermion,out=60,in=180] (c1),
+  %              (a3)-- [gluon, bend right, edge label'=\(g\, Z\, \gamma\)] (c2),
+  %              (a4)-- [boson,out=90,in=90,looseness=2.0,edge label'=\(W\)] (a2)
+  %            };
+  %
+  %            \draw[decoration={brace}, decorate] (b1.south west)-- (a1.north west)
+  %              node[pos=0.5, left] {  \(K^{0}\)};
+  %            \draw[decoration={brace}, decorate] (a5.north east)-- (c1.south east)
+  %              node[pos=0.5, right] {  \(\pi^{+}\)};
+  %            \draw[decoration={brace}, decorate] (c3.north east)-- (b2.south east)
+  %              node[pos=0.5, right] {  \(\pi^{-}\)};
+  %          \end{feynman}
+  %        \end{tikzpicture}
+  %        \caption{Pinguindiagramm des CP-verletzenden, neutralen Kaonenzerfalls}
+  %      \end{figure}
+  %    \end{column}
+  %    \begin{column}{0.5\textwidth}
+  %      \begin{itemize}
+  %        \item Direkte CP-Verletzung:
+  %        \item[\rightarrow] Keine vorherige Mischung der Kaonen
+  %        \item Messung der partiellen Zerfallsbreiten von:
+  %        \begin{align*}
+  %          K_{L}^0 &\rightarrow \pi^+ \pi^- \\
+  %          K_{L}^0 &\rightarrow \pi^0 \pi^0 \\
+  %          K_{S}^0 &\rightarrow \pi^+ \pi^- \\
+  %          K_{S}^0 &\rightarrow \pi^0 \pi^0
+  %        \end{align*}
+  %        \item Bildung der Verhältnisse
+  %        \item[\rightarrow] Anteile der direkten und indirekten Verletzung spielen eine Rolle
+  %      \end{itemize}
+  %    \end{column}
+  %  \end{columns}
+  %\end{frame}
 
-              \vertex[below=2cm of a1] (b1){\(d\)};
-              \vertex[below=2cm of a5] (b2){\(d\)};
+  %\begin{frame}{Was wird dann gemessen?}
+  %  \begin{columns}[onlytextwidth]
+  %    \begin{column}{0.4\textwidth}
+  %      \begin{align*}
+  %        \eta_{00} = \frac{A \left(K_L \rightarrow \pi^0 \pi^0 \right)}{A \left(K_S \rightarrow \pi^0 \pi^0 \right)} &= \epsilon - 2 \epsilon^{\prime} \\
+  %        \eta_{\pm} = \frac{A \left(K_L \rightarrow \pi^+ \pi^- \right)}{A \left(K_S \rightarrow \pi^+ \pi^- \right)} &= \epsilon +  \epsilon^{\prime}
+  %      \end{align*}
+  %      \begin{equation*}
+  %        %R = \frac{A \left(K_L \rightarrow \pi^0 \pi^0 \right)}{A \left(K_S \rightarrow \pi^0 \pi^0 \right)} / \frac{A \left(K_L \rightarrow \pi^+ \pi^- \right)}{A \left(K_S \rightarrow \pi^+ \pi^- \right)}
+  %        \symup{Re}(\epsilon' / \epsilon) = \frac{1}{6} \left\{1 - \left|\frac{\eta_{00}}{\eta_{\pm}}\right|^2 \right\}
+  %      \end{equation*}
+  %      %\begin{equation*}
+  %      %  \approx 1 - 6 \,\symup{Re}(\epsilon^{\prime} / \epsilon)
+  %      %\end{equation*}
+  %    \end{column}
+  %    \begin{column}{0.5\textwidth}
+  %      \begin{itemize}
+  %        \item Vorteil: Viele systematische Fehler kürzen sich
+  %        \item $\epsilon^{\prime} = 0$: keine direkte CP-Verletzung
+  %        \item $\epsilon^{\prime} \neq 0$: direkte CP-Verletzung
+  %        \item Bis in die 90er kein eindeutiges Ergebnis durch Experimente
+  %      \end{itemize}
+  %      Theoretische Überlegungen:
+  %      \begin{itemize}
+  %        \item Drei Quarkfamilien (Kobayashi und Maskawa, 1973) % \rightarrow noch vor Entdeckung des Charm-Quarks)
+  %      \end{itemize}
+  %      Experimentelle Implikationen:
+  %      \begin{itemize}
+  %        \item Drei Generationen messbar
+  %        \item Beobachtung direkter CP-Verletzung in Mesonen-Systemen
+  %      \end{itemize}
+  %    \end{column}
+  %  \end{columns}
+  %\end{frame}
 
-              \vertex[below=1.5em of a5] (c1){\(u\)};
-              \vertex[above=1.5em of b2] (c3){\(\overline u\)};
-              \vertex at ($(c1)!0.5!(c3)- (1cm, 0)$) (c2);
-
-              \diagram* {
-                {[edges=fermion]
-                  (a5)-- (a4)-- (a3)-- (a2)-- (a1),
-                },
-                (b1)-- [fermion] (b2),
-                (c3)-- [fermion,out=180,in=-60] (c2)-- [fermion,out=60,in=180] (c1),
-                (a3)-- [gluon, bend right, edge label'=\(g\, Z\, \gamma\)] (c2),
-                (a4)-- [boson,out=90,in=90,looseness=2.0,edge label'=\(W\)] (a2)
-              };
-
-              \draw[decoration={brace}, decorate] (b1.south west)-- (a1.north west)
-                node[pos=0.5, left] {  \(K^{0}\)};
-              \draw[decoration={brace}, decorate] (a5.north east)-- (c1.south east)
-                node[pos=0.5, right] {  \(\pi^{+}\)};
-              \draw[decoration={brace}, decorate] (c3.north east)-- (b2.south east)
-                node[pos=0.5, right] {  \(\pi^{-}\)};
-            \end{feynman}
-          \end{tikzpicture}
-          \caption{Pinguindiagramm des CP-verletzenden, neutralen Kaonenzerfalls}
-        \end{figure}
-      \end{column}
-      \begin{column}{0.5\textwidth}
-        \begin{itemize}
-          \item Direkte CP-Verletzung:
-          \item[\rightarrow] Keine vorherige Mischung der Kaonen
-          \item Messung der partiellen Zerfallsbreiten von:
-          \begin{align*}
-            K_{L}^0 &\rightarrow \pi^+ \pi^- \\
-            K_{L}^0 &\rightarrow \pi^0 \pi^0 \\
-            K_{S}^0 &\rightarrow \pi^+ \pi^- \\
-            K_{S}^0 &\rightarrow \pi^0 \pi^0
-          \end{align*}
-          \item Bildung der Verhältnisse
-          \item[\rightarrow] Anteile der direkten und indirekten Verletzung spielen eine Rolle
-        \end{itemize}
-      \end{column}
-    \end{columns}
-  \end{frame}
-
-  \begin{frame}{Was wird dann gemessen?}
+  \begin{frame}{Wie wird das gemessen?}
     \begin{columns}[onlytextwidth]
       \begin{column}{0.4\textwidth}
         \begin{align*}
@@ -418,19 +469,12 @@
       \end{column}
       \begin{column}{0.5\textwidth}
         \begin{itemize}
-          \item Vorteil: Viele systematische Fehler kürzen sich
+          \item Messung der partiellen Zerfallsbreiten
+          \item[\rightarrow] Bilden der Verhältnisse
+          \item[Vorteil:] Viele systematische Fehler kürzen sich
           \item $\epsilon^{\prime} = 0$: keine direkte CP-Verletzung
           \item $\epsilon^{\prime} \neq 0$: direkte CP-Verletzung
           \item Bis in die 90er kein eindeutiges Ergebnis durch Experimente
-        \end{itemize}
-        Theoretische Überlegungen:
-        \begin{itemize}
-          \item Drei Quarkfamilien (Kobayashi und Maskawa, 1973) % \rightarrow noch vor Entdeckung des Charm-Quarks)
-        \end{itemize}
-        Experimentelle Implikationen:
-        \begin{itemize}
-          \item Drei Generationen messbar
-          \item Beobachtung direkter CP-Verletzung in Mesonen-Systemen
         \end{itemize}
       \end{column}
     \end{columns}
@@ -544,6 +588,7 @@
     \begin{itemize}
       \item Geschützt durch hochstabiles Kevlar-Glas
       \item Atmosphärendruck
+      \item Verhindern von Streuung an Molekülen
       \item Beherbergt Spektrometer und Wire chambers %Driftkammern
       \item[\rightarrow] Genutzt zur Bestmmung der Winkel von geladenen $\pi$
       \item[\rightarrow] Beherbergt dafür Eisenjochmagnet ($\SI{0.37}{\tesla}$ im Zentrum)
@@ -724,14 +769,14 @@
 
   \subsection{Ergebnisse von KTeV und NA48}
 
-  \begin{frame}{Ergebnisse beider Experimente}
-    \begin{figure}
-      \includegraphics[height=0.8\textheight]{Images/ktevdata.png}
-      \caption{Massenverteilung von KTeV}
-    \end{figure}
-  \end{frame}
+  %\begin{frame}{Ergebnisse beider Experimente}
+  %  \begin{figure}
+  %    \includegraphics[height=0.8\textheight]{Images/ktevdata.png}
+  %    \caption{Massenverteilung von KTeV}
+  %  \end{figure}
+  %\end{frame}
 
-  \begin{frame}
+  \begin{frame}{Ergebnisse beider Experimente}
     \begin{figure}
       \includegraphics[height=0.7\textheight]{Images/ktevaverage.png}
     \end{figure}
@@ -740,12 +785,12 @@
     Weltdurchschnitt: Re$(\epsilon' / \epsilon) = (16.8\pm1.4) \times 10^{-4}$
   \end{frame}
 
-  \begin{frame}
-    \begin{figure}[ht]
-      \includegraphics[height=0.8\textheight]{Images/REEE.png}
-      \caption{Ergebnisse für Re$(\epsilon' / \epsilon) $}
-    \end{figure}
-  \end{frame}
+  %\begin{frame}
+  %  \begin{figure}[ht]
+  %    \includegraphics[height=0.8\textheight]{Images/REEE.png}
+  %    \caption{Ergebnisse für Re$(\epsilon' / \epsilon) $}
+  %  \end{figure}
+  %\end{frame}
 
 \section{Seltene Zerfälle und Präzisionsmessungen}
 
@@ -873,7 +918,7 @@
   \begin{frame}{NA62 - Übersicht}
     \begin{itemize}
       \setlength{\itemindent}{0.5cm}
-      \item[Ziel:] Messung der BR von $K^+ \rightarrow \pi^+ \nu \bar{\nu}$
+      \item[Ziel:] Messung von BR($K^+ \rightarrow \pi^+ \nu \bar{\nu}$)
       \item[Erhofft:] Gleiche Präzision wie Theorie: $\SI{10}{\percent}$
       \item[Benötigt:] $10^{13}$ Zerfälle
     \end{itemize}
@@ -896,18 +941,18 @@
   \begin{frame}{Ereignis und Veto}
     \begin{itemize}
       \item Protonen des SPS treffen auf Be-Block mit $\SI{400}{\giga\electronvolt}$
-      \item Sekundärer Strahl wird auf Kaonen mit $\SI{75}{\giga\electronvolt}$ selektiert
-      \item[\rightarrow] Tracking aller Teilchen durch Pixeldetektor%Damit man weiß wenn andere teilchen in Kaonen zerfallen 100ps Zeitauflösung
-      \item Langer Zerfallstank $\rightarrow$ interessante Region bei $~ \SI{60}{\metre}$
+      \item Sekundärer Strahl wird durch Cherenko-Detektor auf Kaonen mit $\SI{75}{\giga\electronvolt}$ selektiert
+      \item[\rightarrow] Tracking aller Teilchen durch Pixeldetektor(GTK)%Damit man weiß wenn andere teilchen in Kaonen zerfallen 100ps Zeitauflösung
+      \item Langer Zerfallstank $\rightarrow$ interessante Region nach $\SI{60}{\metre}$
       \item[\rightarrow] Umgeben von large-angle-vetoes(LAV) für $\gamma$ aus $K^+ \rightarrow \pi^+ \pi^0$
       \item STRAWS (Tracking Detektoren) innerhalb des Vakuums um Streuprozesse zu verhindern %Luft
-      \item \mu-Veto durch Ring Imaging Cherenkov (RICH)-Detektoren
-      \item \gamma in Flugrichugn werden durch LKr und kleinere shashlik-Kalorimeter aussortiert
+      \item $\mu$-Veto durch Ring Imaging Cherenkov (RICH)-Detektoren
+      \item $\gamma$ in Flugrichtung werden durch LKr und kleinere Shashlik-Kalorimeter aussortiert
       \item Abschluss durch hadron sampling calorimeter (HASC)
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Nach den vetoes, wie misst man den richtige Zerfall?}
+  \begin{frame}{Nach den vetoes, wie misst man den richtigen Zerfall?}
       \begin{columns}[onlytextwidth]
         \begin{column}{0.5\textwidth}
           \begin{figure}[ht]
@@ -921,14 +966,14 @@
           \begin{figure}[ht]
             \begin{center}
               \includegraphics[height=0.6\textheight]{Images/na62knick.png} %Zuschnippeln
-              \caption{Zoom auf den Knick im Detektor}
+              \caption{Zoom auf den Knick des Strahls im Detektor}
             \end{center}
           \end{figure}
         \end{column}
       \end{columns}
   \end{frame}
 
-  \begin{frame}{Nach den vetoes, wie misst man den richtige Zerfall?}
+  \begin{frame}{Nach den vetoes, wie misst man den richtigen Zerfall?}
       \begin{columns}[onlytextwidth]
         \begin{column}{0.4\textwidth}
           \begin{figure}[ht]
@@ -972,7 +1017,6 @@
         Vergleich:
         \begin{align*}
           \symup{Theorie: BR}(K^+ \rightarrow \pi^+ \nu \bar{\nu})     &=  (8.4\pm1.0) \times 10^{-11} \\
-          \symup{Experiment: BR}(K^+ \rightarrow \pi^+ \nu \bar{\nu}) &=  (17.3^{+11.5}_{-10.5}) \times 10^{-11}
         \end{align*}
       \end{column}
     \end{columns}
@@ -1069,9 +1113,9 @@
     KLEVER:
     \begin{itemize}
       \item Nachfolger/ Zukunft von NA62
-      \item Präzise Messung von BR($K \rightarrow \pi \nu \bar{\nu}$)
+      \item Präzisere Messung von BR($K \rightarrow \pi \nu \bar{\nu}$)
       \item Wichtig beide Zerfallsmoden zu vermessen %K+ KL
-      \item[\rightarrow] Unterschiedliche Beeinflussung durch verschiedene Modelle für neue Physik
+      \item[\rightarrow] Unterschiedliche Beeinflussung durch verschiedene Modelle neuer Physik
       \item Start der Datennahme im Jahr 2026
       \item Vetomechanismen ähnlich zu KOTO
       \item Upgrade der Strahlproduktionen und Detektion im Vergleich zu NA62
