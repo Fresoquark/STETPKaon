@@ -126,7 +126,11 @@
 
 \section{Historische Kaonenexperimente}
   \begin{frame}{Weltkarte}
-    %Hier könnte ihre Weltkarte stehen
+    \begin{figure}[ht]
+      \begin{center}
+        \includegraphics[width=\textwidth]{Images/worldmap.png}
+      \end{center}
+    \end{figure}
   \end{frame}
 
 \subsection{Entdeckung der Kaonen}
@@ -518,7 +522,7 @@
       \item Gibt es noch weitere Ursachen für CP-Verletzung, abseits der komplexen Phase der CKM-Matrix?
       \item Inwieweit ist die Leptonuniversalität berücksichtigt?
       \item Wie weit können die Grenzen der Teilchenphysik in Bezug auf seltene Prozesse gebracht werden?
-      \item Gibt es neue Physik, die man durch die Untersuchung von Pinguindiagrammen beobachten kann?
+      \item Gibt es neue Physik, die durch die Untersuchung von Pinguindiagrammen beobachten werden kann?
       \item Können fundamentale Symmetrien, wie CPT, untersucht werden und wenn ja bis zu welchem Grad?
     \end{itemize}
   \end{frame}
@@ -596,7 +600,7 @@
           \item[\rightarrow] Aufspalten des Protonstrahles in $\ket{K_L}$ und später $\ket{K_S}$
           \item Auftreffen von $\ket{K_L}$ und $\ket{K_S}$ am gleichen Detektorpunkt
           \item Vertexrekonstruktion ausreichend für Zerfall in $\pi^{\pm}$
-          \item[\rightarrow] Problematischer $pi^0$
+          \item[\rightarrow] Problematischer $\pi^0$
         \end{itemize}
       \end{column}
     \end{columns}
@@ -905,7 +909,7 @@
       \item[\rightarrow] Hohe Sensitivität auf Prozesse außerhalb des Standardmodells
       \item[\rightarrow] Potentiell auf mehrere Hundert TeV sensitiv
       \item Wichtig um Daten von B-Zerfällen auszuwerten
-      \item[\rightarrow] Aufspüren neuer Freiheitsgrade wie Leptoquark
+      \item[\rightarrow] Aufspüren neuer Freiheitsgrade wie Leptoquark %teilchen, die an QUarks und Leptonen koppeln und eine Umwandlung ermöglichen
     \end{itemize}
     %\begin{align*}
     %  \symup{Zerfall}                       & & \symup{Theorie} &\quad \symup{Experiment} \\
@@ -918,7 +922,13 @@
     \begin{columns}[onlytextwidth]
       \begin{column}{0.3\textwidth}
         \begin{figure}[ht]
-          \feynmandiagram[vertical=e to f] {
+          \feynmandiagram[horizontal=a to b, scale=1.1] {
+          a -- [anti fermion, edge label=\(\overline q\)] b;
+          };
+        \end{figure}
+        \begin{figure}[ht]
+          \vspace*{-0.4cm}
+          \feynmandiagram[vertical=e to f,scale = 0.85] {
           a -- [fermion, edge label=\(s\)] b -- [boson, edge label=\(W\)] c -- [fermion, edge label=\(d\)] d,
           b -- [fermion, edge label'=\(t\)] e -- [fermion, edge label'=\(t\)] c,
           e -- [boson, edge label=\(Z\)] f,
@@ -928,7 +938,13 @@
       \end{column}
       \begin{column}{0.3\textwidth}
         \begin{figure}[ht]
-          \feynmandiagram[vertical=e to f] {
+          \feynmandiagram[horizontal=a to b, scale=1.1] {
+          a -- [anti fermion, edge label=\(\overline q\)] b;
+          };
+        \end{figure}
+        \begin{figure}[ht]
+          \vspace*{-0.4cm}
+          \feynmandiagram[vertical=e to f, scale=0.85] {
           a -- [fermion, edge label=\(s\)] b -- [fermion, edge label=\(t\)] c -- [fermion, edge label=\(d\)] d,
           b -- [boson, edge label'=\(W\)] e -- [boson, edge label'=\(W\)] c,
           e -- [boson, edge label=\(Z\)] f,
@@ -937,27 +953,26 @@
         \end{figure}
       \end{column}
       \begin{column}{0.3\textwidth}
-        \begin{figure}[ht]
-          %\feynmandiagram[vertical=e to f] {
-          %a -- [anti fermion, edge label=\(d\)] b -- [boson, edge label=\(W\)] c -- [anti fermion, edge label=\(\bar{\nu}\)] d,
-          %b -- [anti fermion, edge label'=\(t\)] e,
-          %c -- [fermion, edge label'=\(l\)] f,
-          %e -- [boson, edge label=\(W\)] f,
-          %h -- [anti fermion, edge label=\(\nu\)] f,
-          %e -- [anti fermion, edge label=\(s\)] i;
-          %};
-          \feynmandiagram[layered layout, vertical=a to b]{
-            i1 [particle=\(d\)]
-              -- [fermion] a
-              -- [photon, edge label'=\(W\)] b
-              -- [fermion] f1 [particle=\(\nu\)],
-            i2 [particle=\(s\)]
-              -- [anti fermion] c
-              -- [photon, edge label'=\(W\)] d
-              -- [anti fermion] f2 [particle=\(\overline \nu\)],
-            { [same layer] a -- [fermion, edge label'=\(t\)] c },
-            { [same layer] b -- [anti fermion, edge label'=\(l\)] d}
-            };
+      \begin{figure}[ht]
+        \hspace*{0.15cm}
+        \feynmandiagram[horizontal=a to b, scale=0.92] {
+        a -- [fermion, edge label=\(\overline q\)] b;
+        };
+      \end{figure}
+      \begin{figure}[ht]
+        \vspace*{-0.4cm}
+        \feynmandiagram[layered layout, vertical=a to b, scale=0.85]{
+          i1 [particle=\(d\)]
+            -- [fermion] a
+            -- [photon, edge label'=\(W\)] b
+            -- [fermion] f1 [particle=\(\nu\)],
+          i2 [particle=\(s\)]
+            -- [anti fermion] c
+            -- [photon, edge label'=\(W\)] d
+            -- [anti fermion] f2 [particle=\(\overline \nu\)],
+          { [same layer] a -- [fermion, edge label'=\(t\)] c },
+          { [same layer] b -- [anti fermion, edge label'=\(l\)] d}
+          };
         \end{figure}
       \end{column}
     \end{columns}
@@ -972,13 +987,13 @@
       \item Zerfall $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ durch E787/E949 am BNL untersucht %(Brookhaven National Laboratory)
       \item[\rightarrow] Einschränkung auf:
       \begin{align*}
-        \symup{Experiment: BR}(K^+ \rightarrow \pi^+ \nu \bar{\nu}) &=  (17.3^{+11.5}_{-10.5}) \times 10^{-11} \\
+        \symup{Experiment: BR}(K^+ \rightarrow \pi^+ \nu \bar{\nu}) &< 3.35 \times 10^{-10} @\, \SI{90}{\percent}CL \\
         \symup{Theorie: BR}(K^+ \rightarrow \pi^+ \nu \bar{\nu})     &=  (8.4\pm1.0) \times 10^{-11}
       \end{align*}
       \item Zerfall $K_L \rightarrow \pi^0 \nu \bar{\nu}$ durch E391a am J-PARC/KEK untersucht
       \item[\rightarrow] Einschränkung auf:
       \begin{align*}
-        \symup{Experiment: BR}(K^+ \rightarrow \pi^+ \nu \bar{\nu}) &< 2.6 \times 10^{-8} @ \SI{90}{\percent}CL \\
+        \symup{Experiment: BR}(K^+ \rightarrow \pi^+ \nu \bar{\nu}) &< 2.6 \times 10^{-8} @\, \SI{90}{\percent}CL \\
         \symup{Theorie: BR}(K^+ \rightarrow \pi^+ \nu \bar{\nu})     &=  (3.4\pm0.6) \times 10^{-11}
       \end{align*}
       \item[]
@@ -1035,42 +1050,42 @@
     \end{figure}
   \end{frame}
 
-  \begin{frame}{Ereignis und Veto}
-    \begin{itemize}
-      \item Protonen des SPS treffen auf Be-Block mit $\SI{400}{\giga\electronvolt}$
-      \item Sekundärer Strahl wird durch Cherenkov-Detektor auf Kaonen mit $\SI{75}{\giga\electronvolt}$ selektiert
-      \item[\rightarrow] Tracking aller Teilchen durch Pixeldetektor(GTK)%Damit man weiß wenn andere teilchen in Kaonen zerfallen 100ps Zeitauflösung
-      \item Langer Zerfallstank $\rightarrow$ interessante Region nach $\SI{60}{\metre}$
-      \item[\rightarrow] Umgeben von large-angle-vetoes(LAV) für $\gamma$ aus $K^+ \rightarrow \pi^+ \pi^0$
-      \item STRAWS (Tracking Detektoren) innerhalb des Vakuums um Streuprozesse zu verhindern %Luft
-      \item $\mu$-Veto durch Ring Imaging Cherenkov (RICH)-Detektoren
-      \item $\gamma$ in Flugrichtung werden durch LKr und kleinere Shashlik-Kalorimeter aussortiert
-      \item Abschluss durch hadron sampling calorimeter (HASC)
-    \end{itemize}
-  \end{frame}
+  %\begin{frame}{Ereignis und Veto}
+  %  \begin{itemize}
+  %    \item Protonen des SPS treffen auf Be-Block mit $\SI{400}{\giga\electronvolt}$
+  %    \item Sekundärer Strahl wird durch Cherenkov-Detektor auf Kaonen mit $\SI{75}{\giga\electronvolt}$ selektiert
+  %    \item[\rightarrow] Tracking aller Teilchen durch Pixeldetektor(GTK)%Damit man weiß wenn andere teilchen in Kaonen zerfallen 100ps Zeitauflösung
+  %    \item Langer Zerfallstank $\rightarrow$ interessante Region nach $\SI{60}{\metre}$
+  %    \item[\rightarrow] Umgeben von large-angle-vetoes(LAV) für $\gamma$ aus $K^+ \rightarrow \pi^+ \pi^0$
+  %    \item STRAWS (Tracking Detektoren) innerhalb des Vakuums um Streuprozesse zu verhindern %Luft
+  %    \item $\mu$-Veto durch Ring Imaging Cherenkov (RICH)-Detektoren
+  %    \item $\gamma$ in Flugrichtung werden durch LKr und kleinere Shashlik-Kalorimeter aussortiert
+  %    \item Abschluss durch hadron sampling calorimeter (HASC)
+  %  \end{itemize}
+  %\end{frame}
 
-  \begin{frame}{Nach den vetos, wie misst man den richtigen Zerfall?}
-      \begin{columns}[onlytextwidth]
-        \begin{column}{0.5\textwidth}
-          \begin{figure}[ht]
-            \begin{center}
-              \includegraphics[width=0.9\textwidth]{Images/na62missing.png} %Zuschnippeln
-              \caption{Darstellung des Zerfalls}
-            \end{center}
-          \end{figure}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-          \begin{figure}[ht]
-            \begin{center}
-              \includegraphics[height=0.6\textheight]{Images/na62knick.png} %Zuschnippeln
-              \caption{Zoom auf den Knick des Strahls im Detektor}
-            \end{center}
-          \end{figure}
-        \end{column}
-      \end{columns}
-  \end{frame}
+  %\begin{frame}{Nach den vetos, wie misst man den richtigen Zerfall?}
+  %    \begin{columns}[onlytextwidth]
+  %      \begin{column}{0.5\textwidth}
+  %        \begin{figure}[ht]
+  %          \begin{center}
+  %            \includegraphics[width=0.9\textwidth]{Images/na62missing.png} %Zuschnippeln
+  %            \caption{Darstellung des Zerfalls}
+  %          \end{center}
+  %        \end{figure}
+  %      \end{column}
+  %      \begin{column}{0.5\textwidth}
+  %        \begin{figure}[ht]
+  %          \begin{center}
+  %            \includegraphics[height=0.6\textheight]{Images/na62knick.png} %Zuschnippeln
+  %            \caption{Zoom auf den Knick des Strahls im Detektor}
+  %          \end{center}
+  %        \end{figure}
+  %      \end{column}
+  %    \end{columns}
+  %\end{frame}
 
-  \begin{frame}{Nach den vetos, wie misst man den richtigen Zerfall?}
+  \begin{frame}{Kriterienübersicht}
       \begin{columns}[onlytextwidth]
         \begin{column}{0.4\textwidth}
           \begin{figure}[ht]
@@ -1105,8 +1120,8 @@
       \begin{column}{0.5\textwidth}
         Neue Ergebnisse:
         \begin{align*}
-          BR(K^+ \rightarrow \pi^+ \nu \bar{\nu}) &< 11 \times 10^{-10} @ \SI{90}{\percent} CL \\
-          BR(K^+ \rightarrow \pi^+ \nu \bar{\nu}) &< 14 \times 10^{-10} @ \SI{95}{\percent} CL
+          BR(K^+ \rightarrow \pi^+ \nu \bar{\nu}) &< 11 \times 10^{-10} @\, \SI{90}{\percent} CL \\
+          BR(K^+ \rightarrow \pi^+ \nu \bar{\nu}) &< 14 \times 10^{-10} @\, \SI{95}{\percent} CL
         \end{align*}
         \begin{itemize}
           \item[\rightarrow] Ergebnisse sind mit SM kompatibel
@@ -1137,7 +1152,7 @@
           \item Experiment am J-PARC (Japan Proton Accelerator Research Complex)
           \item[\rightarrow] Nutzung des high intensity proton beams ($\SI{30}{\giga\electronvolt}$) des J-PARC
           \item Ähnlicher Zerfall wie NA62: $K_L \rightarrow \pi^0 \nu \bar{\nu}$
-          \item[\rightarrow] Wurde von E391a auf $< 2.6 \times 10^{-8} @ \SI{90}{\percent}$ beschränkt
+          \item[\rightarrow] Wurde von E391a auf $< 2.6 \times 10^{-8} @\, \SI{90}{\percent}$ beschränkt
           %E391a Experiment am J-PArc
           \item Außerdem: $K_L \rightarrow \pi^0 \Chi^0$
           \item[\rightarrow] $\Chi^0$ unsichtbares leichtes Bosonm, mit Masse $\SI{135}{\mega\electronvolt}$
@@ -1168,10 +1183,10 @@
       \begin{column}{0.5\textwidth}
         \begin{itemize}
           \item Vorherige Sensitivität auf $K_L \rightarrow \pi^0 \nu \bar{\nu}$ um Größenordnung verbessert:
-          \item[\rightarrow] Neue obere schranke von $3.0 \times 10^{-9} @ \SI{90}{\percent} CL$
+          \item[\rightarrow] Neue obere schranke von $3.0 \times 10^{-9} @\, \SI{90}{\percent} CL$
           \item[\rightarrow] SM-Vorhersage von $(3.00\pm0.30) \times 10^{-11}$
           \item Vorherige Sensitivität auf $K_L \rightarrow \pi^0 \Chi^0$ verbessert:
-          \item[\rightarrow] Neue obere schranke von $2.4 \times 10^{-9} @ \SI{90}{\percent} CL$
+          \item[\rightarrow] Neue obere schranke von $2.4 \times 10^{-9} @\, \SI{90}{\percent} CL$
         \end{itemize}
       \end{column}
     \end{columns}
